@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+  <html>
+    <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, user-scalable=yes, maximum-scale=1.0, minimum-scale=1.0">
+
+      <!-- タイトル -->
+      <title>Training</title>
+
+      <!-- スタイルシート指定 -->
+      <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+      <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+      <%= csrf_meta_tags %>
+
+      <!-- スクリプト -->
+      <script type="text/javascript">
+      WebFontConfig = {
+        google: { families: [ 'Unica+One::latin' ] }
+      };
+      (function() {
+        var wf = document.createElement('script');
+        wf.src = ('https:' == document.location.protocol ? 'https' : 'http') +
+          '://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js';
+        wf.type = 'text/javascript';
+        wf.async = 'true';
+        var s = document.getElementsByTagName('script')[0];
+        s.parentNode.insertBefore(wf, s);
+      })();
+      </script>
+      <script src="js/jquery1.7.2.min.js"></script>
+      <script src="js/script.js"></script>
+    </head>
+<body>
+
+<!-- ヘッダー -->
+<header id="header" role="banner">
+  <div class="inner">
+    <h1>Lorem ipsum dolor amet consectetur</h1>
+    <h2><a href="index.html">Sample Company</a></h2>
+    <div class="user_nav grid-6">
+      <a class="post" href="/tweets/new">投稿する</a>
+    </div>
+  </div>
+</header>
+
+<%= yield %>
+
+<!-- フッター -->
+<footer id="footer">
+  <p id="copyright">Copyright &copy; Sample Company All rights Reserved. Design by <a href="http://f-tpl.com" target="_blank" rel="nofollow">http://f-tpl.com</a>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,8 @@
+<div class="contents row" >
+  <% @trains.each do |train| %>
+    <div class="content_post" style="background-image: url(<%= train.image %>);">
+        <%= simple_format(train.text) %>
+    <span class="name"><%= train.text %></span>
+  </div>
+  <% end %>
+</div>
