@@ -45,18 +45,20 @@
           <h1>筋トレ・健康グッズの口コミNo.1 サイト</h1>
           <h2><a href="/">Training &amp; Co.</a></h2>
 
-        <button type="button" class="drawer-toggle drawer-hamburger">
-          <span class="sr-only">toggle navigation</span>
-          <span class="drawer-hamburger-icon"></span>
-        </button>
-         
-        <nav class="drawer-nav">
-          <ul class="drawer-menu ">
-            <!-- ドロワーメニューの中身 -->
-            <li class="drawer-content"><%= link_to "ログイン", new_user_session_path %></li>
-            <li class="drawer-content"><%= link_to "新規登録", new_user_registration_path %></li>
-          </ul>
-        </nav>
+        <div id="global-nav">
+          <button type="button" class="drawer-toggle drawer-hamburger">
+            <span class="sr-only">toggle navigation</span>
+            <span class="drawer-hamburger-icon"></span>
+          </button>
+           
+          <nav class="drawer-nav drawer-nav_style">
+            <ul class="drawer-menu drawer-nav_style">
+              <!-- ドロワーメニューの中身 -->
+              <li class="drawer-content"><%= link_to "ログイン", new_user_session_path %></li>
+              <li class="drawer-content"><%= link_to "新規登録", new_user_registration_path %></li>
+            </ul>
+          </nav>
+        </div>
       </div>
     </header>
 
