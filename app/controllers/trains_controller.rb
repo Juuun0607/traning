@@ -5,7 +5,7 @@ class TrainsController < ApplicationController
   end
 
   def show
-    
+    @train = Train.find(1)
   end
 
 end
