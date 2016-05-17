@@ -6,6 +6,7 @@ class TrainsController < ApplicationController
 
   def show
     @train = Train.find(1)
+    @review = Review.new
   end
 
   def new
