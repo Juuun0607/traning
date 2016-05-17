@@ -1,0 +1,83 @@
+<div id="wrapper">
+  <div id="content2">
+    <section>
+      <article class="content">
+        <div class="post">
+  <div class="content_post">
+    <h2 class="itemtitle"><%= link_to (@train.title) , "/trains/#{@train.id}", method: :get %></h2>
+    <%= image_tag (@train.image),:width => '50%',:class => "itemimage" %>
+    <div class="point">
+      <p>レビュー平均点数</p>
+      <p>★★★☆☆(3点)</p>
+    </div><br><br><br><br>
+    <%= simple_format(@train.text, :class => "itemtext")%>
+  </div>
+          <table class="statsDay">
+            <tbody>
+              <tr>
+                <th>商品名</th>
+                <td><%= link_to (@train.title) , "trains/#{@train.id}", method: :get %></td>
+              </tr>
+              <tr>
+                <th>価格</th>
+                <td>¥1,000,000</td>
+              </tr>
+              <tr>
+                <th>販売ショップ</th>
+                <td>amazon/楽天/ポンパレモール</td>
+              </tr>
+            </tbody>
+          </table>
+          <div class="item_links">
+          <%= link_to "公式サイトへ" ,(@train.link1) , method: :get ,class: 'itemlink1'%>
+          <a href="" class="itemlink2">Amazon.com<a>
+          <a href="" class="itemlink3">ポンパレモール<a>
+          <a href="" class="itemlink4">楽  天<a>
+          </div>
+          <h3>商品レビュー</h3>
+          <%= render :file => "reviews/index" ,:class => "reviewlist"%>
+          <% if user_signed_in? %>
+          <%= render :partial => "reviews/form" %>
+          <% else %>
+           <%= link_to ">> 新規登録してレビューを書く", new_user_registration_path, class: 'regi' %>
+           <%= link_to ">> ログインしてレビューを書く", new_user_session_path, class: 'log' %>
+          <% end %>
+        </div>
+      </article>
+    </section>
+  </div>
+  <!-- / content -->
+
+  <aside id="sidebar2">
+    <section class="widgetInfo">
+      <div class="newsTitle">
+        <h3 class="title"><span>カテゴリ別人気ランキング</span></h3>
+        <p><a href="trains/item">一覧</a>
+      </div>
+      <div class="post news">
+        <p><a href="trains/item"><time>2012/11/30</time><span>環境への取り組み</span></a>
+        <p><a href="trains/item"><time>2012/11/15</time><span>新サービスを開始</span></a>
+        <p><a href="trains/item"><time>2012/11/02</time><span>リニューアル</span></a>
+        <p><a href="trains/item"><time>2012/10/30</time><span>環境への取り組み</span></a>
+        <p><a href="trains/item"><time>2012/09/13</time><span>新講座を開講しました</span></a>
+      </div>
+    </section>
+    <section class="widget">
+      <h3><span>カテゴリ</span></h3>
+      <ul>
+        <li><a href="trains/item">トレーニンググッズ</a></li>
+        <li><a href="trains/item">サプリメント</a></li>
+        <li><a href="trains/item">ダイエット食品</a></li>
+        <li><a href="trains/item">がちむちアイテム</a></li>
+        <li><a href="trains/item">ウェア</a></li>
+        <li><a href="trains/item">あっはっは〜</a></li>
+      </ul>
+    </section>
+  </aside>
+
+</div>
+
+<!-- フッター -->
+<footer id="footer">
+  <p id="copyright">Copyright &copy; Training & Co. All rights Reserved.
+</footer>
