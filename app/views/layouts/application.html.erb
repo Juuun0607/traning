@@ -11,8 +11,6 @@
       <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
       <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
       <%= csrf_meta_tags %>
-
-
       <!-- スクリプト -->
       <script type="text/javascript">
       WebFontConfig = {
@@ -27,6 +25,7 @@
         var s = document.getElementsByTagName('script')[0];
         s.parentNode.insertBefore(wf, s);
       })();
+
       </script>
       <script src="js/jquery1.7.2.min.js"></script>
       <script src="js/script.js"></script>
@@ -53,9 +52,13 @@
            
           <nav class="drawer-nav drawer-nav-style">
             <ul class="drawer-menu drawer-nav-style">
-              <!-- ドロワーメニューの中身 -->
-              <li class="drawer-content"><%= link_to "ログイン", new_user_session_path %></li>
-              <li class="drawer-content"><%= link_to "新規登録", new_user_registration_path %></li>
+              <% unless user_signed_in? %>
+                <!-- ドロワーメニューの中身 -->
+                <li class="drawer-content"><%= link_to "ログイン", new_user_session_path %></li>
+                <li class="drawer-content"><%= link_to "新規登録", new_user_registration_path %></li>
+              <% else %>
+                <li class="drawer-content"><%= link_to "サインアウト", destroy_user_session_path, method: :delete %></li>
+              <% end %>
             </ul>
           </nav>
         </div>
@@ -68,5 +71,3 @@
       <p id="copyright">Copyright © Training &amp; Co. All rights Reserved.
     </p></footer>
   </body>
-
-
