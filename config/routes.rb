@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
-  get 'trains' => 'trains#index'
-  get 'trains/:id' => 'trains#show'
+  devise_for :users
+  root 'trains#index'
+
+  resources :trains do
+    resources :reviews
+  end
 end

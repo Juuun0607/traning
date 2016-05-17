@@ -1,80 +1,46 @@
-<!-- ヘッダー -->
-<header id="top-head">
-    <div class="headinner">
-        <div id="mobile-head">
-            <h1>筋トレ・健康グッズの口コミNo.1 サイト</h1>
-            <h2><a href="/">Training &amp; Co.</a></h2>
-            <div id="nav-toggle">
-                <div>
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </div>
-            </div>
-        </div>
-        <nav id="global-nav">
-            <ul>
-                
-                <li>                      <a class="user" href="/users/sign_in">ログイン</a>
-                      <a class="user" href="/users/sign_up">新規登録</a>
-                    </li>
-            </ul>
-        </nav>
-    </div>
-</header>
 
 <div id="wrapper">
-
   <!-- 検索ボタン -->
 <section class="search">
 <dl>
 <h2 class="title"><dt>検索</dt></h2>
 <dd class="post">
   <div class="searchform">
-    <form class="train_search" id="train_search" action="/trains" accept-charset="UTF-8" method="get"><input name="utf8" type="hidden" value="✓">
+<!--     <form class="train_search" id="train_search" action="/trains" accept-charset="UTF-8" method="get"><input name="utf8" type="hidden" value="✓">
         <input placeholder="商品名・キーワードで検索" type="search" name="q[title_or_text_cont]" id="q_title_or_text_cont">
         <input type="submit" name="commit" value="Search">
-</form>  </div>
+    </form> -->
+    <%= search_form_for @q do |f| %>
+      <div class="control-group">
+        <div class="controls">
+          <%= f.text_field :title_or_text_cont, placeholder: "商品名・キーワードで検索", class: "form_horizon" %>
+        </div>
+      </div>
+      <%= f.submit class: "form_horizon" %>
+    <% end %>
+  </div>
 </dd>
 </dl>
   </section>
-<!-- 検索ボタンおわり -->
+
 
   <div id="content">
     <section>
       <h2 class="title"><span>2016年！最新トレーニンググッズ</span></h2>
       <ul class="post">
+        <% @trains.each do |train| %>
           <li>
-          <img width="30%" class="itemimage" src="http://thumbnail.image.rakuten.co.jp/@0_mall/kirei/cabinet/abhg-pf3.jpg" alt="Abhg pf3">
-            <h3><a data-method="get" href="trains/1">アブトロニックX2</a></h3>
-            <p></p><p class="itemtext">過去販売台数170万台のアブトロ（アブトロニック）が進化して登場！アブトロニックX2のEMSは、1分間で400回以上の運動量に相当する腹筋ダイエットです。「アブトロニックX2（アブトロニックエックスツー）」で理想のボディメイクを！</p><p></p>
+            <img width="30%" class="itemimage" src="<%= train.image %>" alt="Abhg pf3">
+            <h3><a data-method="get" href="trains/<%= train.id %>"><%= train.title %></a></h3>
+            <p></p><p class="itemtext"><%= train.text %></p><p></p>
           </li>
-          <li>
-          <img width="30%" class="itemimage" src="http://yonezawa-mitsuba.com/wp-content/uploads/2015/09/%E3%82%B7%E3%83%83%E3%82%AF%E3%82%B9%E3%83%91%E3%83%83%E3%83%891.jpg" alt="%e3%82%b7%e3%83%83%e3%82%af%e3%82%b9%e3%83%91%e3%83%83%e3%83%891">
-            <h3><a data-method="get" href="trains/2">SIXPAD</a></h3>
-            <p></p><p class="itemtext">「SIXPAD（シックスパッド）」は世界最高峰の研究から導き出されたEMS理論、MTGの独自技術、世界No.1フットボーラーであるクリスティアーノ・ロナウドのトレーニング理論から誕生した、革命的トレーニング・ギア。</p><p></p>
-          </li>
-          <li>
-          <img width="30%" class="itemimage" src="http://interesting-koka.com/wp-content/uploads/2015/01/wanda2.png" alt="Wanda2">
-            <h3><a data-method="get" href="trains/3">ワンダーコア</a></h3>
-            <p></p><p class="itemtext">体を倒すだけで腹筋を鍛えられる、ただひとつの腹筋マシーン。1セットたったの30秒。「忙しくて筋トレする時間が取れない」「ジムでのトレーニングが続けられない」「腰や首への負担が気になる」という方でも、ワンダーコアなら自宅で簡単、かつ効果的に腹筋を鍛えることができます。</p><p></p>
-          </li>
-          <li>
-          <img width="30%" class="itemimage" src="http://ecx.images-amazon.com/images/I/71DxeohnHYL._SL1500_.jpg" alt="71dxeohnhyl. sl1500 ">
-            <h3><a data-method="get" href="trains/4">Reebok(リーボック) GB40 エクササイズバイク</a></h3>
-            <p></p><p class="itemtext">リーボックGB40エクササイズバイクはバイクトレーニング゛の初心者でも簡単に使用することができ
-<br>最良のトレーニング効果が期待できるエクササイズバイクです。大型のLCDス液晶スクリーンから基本的に必要な時間、距離、消費カロリーを確認できハンドル部分に装着された心拍センサーからエクササイズ時の心拍数を確認しながらエクササイズができます。</p><p></p>
-          </li>
-          <li>
-          <img width="30%" class="itemimage" src="http://ecx.images-amazon.com/images/I/61CCO8yAb7L._SL1500_.jpg" alt="61cco8yab7l. sl1500 ">
-            <h3><a data-method="get" href="trains/5">フェイシャルフィットネス PAO（パオ）</a></h3>
-            <p></p><p class="itemtext">若さのカギは顔の筋肉！1回30秒1日たった2回のカンタントレーニングでお顔の筋トレ習慣を！モニターの94％が効果を実感した口元集中トレーニング「フェイシャルフィットネス PAO（パオ）」</p><p></p>
-          </li>
+        <% end %>
       </ul>
     </section>
+    <%= link_to "サインアウト", destroy_user_session_path, method: :delete %>
+
+    <!-- 
   <nav class="pagination">
-    
-    
         <span class="page current">
   1
 </span>
@@ -92,6 +58,11 @@
 </span>
 
   </nav>
+ -->
+
+ <nav class="pagenation">
+  <%= paginate @trains %>
+ </nav>
 
   </div>
 <!-- / content -->
@@ -160,13 +131,3 @@
   </aside>
 </div>
 <!-- / wrapper -->
-
-<!-- フッター -->
-<footer id="footer">
-  <p id="copyright">Copyright © Training &amp; Co. All rights Reserved.
-</p></footer>
-
-
-
-<form method="post" action="http://localhost:3000/trains/1" style="display: none;"><input name="_method" value="get" type="hidden"><input name="authenticity_token" value="/7F0y4n/ILQurnQN0OPhLuQFR9/QrqESLQ9scHVXFKYKhSeVkFWNmbN+7x1U4qku5okyvXr68/Q9ii9bogLMaQ==" type="hidden"></form>
-
