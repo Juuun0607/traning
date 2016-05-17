@@ -8,6 +8,7 @@ class TrainsController < ApplicationController
   end
 
   def new
+    @train = Train.find(1)
   end
 
   def create
