@@ -1,0 +1,13 @@
+<div class="review-header clearfix">
+  <h4><%= review.title %></h4>
+  <div class="review-meta">
+    <span class="review-point">
+      評価
+      <span>★★★☆☆(<%= review.rate %>点)</span>
+    </span>
+    <span class="review-user"><%= review.user.nickname %></span>
+  </div>
+</div>
+<div class="review-comment">
+  <%= simple_format(review.review, :class => "itemtext") %>
+</div>

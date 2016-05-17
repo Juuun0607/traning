@@ -47,6 +47,7 @@ end
 gem 'devise'
 gem 'kaminari'
 gem 'ransack'
+gem 'jquery-turbolinks'
 gem 'compass-rails','~> 2.0'
 gem 'sprockets', '2.11.0'
 
@@ -54,3 +55,5 @@ group :production do
   gem 'rails_12factor'
   gem 'pg'
 end
+
+
