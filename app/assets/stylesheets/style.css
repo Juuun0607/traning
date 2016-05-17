@@ -1,646 +1,933 @@
-@charset "utf-8";
-
+@charset "UTF-8";
 /* =Reset default browser CSS.
 Based on work by Eric Meyer: http://meyerweb.com/eric/tools/css/reset/index.html
 -------------------------------------------------------------- */
-html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td {border: 0;font-family: inherit;font-size: 100%;font-style: inherit;font-weight: inherit;margin: 0;outline: 0;padding: 0;vertical-align: baseline;}
-:focus {outline: 0;}
-
-ol, ul {list-style: none;}
-table {border-collapse: separate;border-spacing: 0;}
-caption, th, td {font-weight: normal;text-align: left;}
-blockquote:before, blockquote:after,q:before, q:after {content: "";}
-blockquote, q {quotes: "" "";}
-a img {border: 0;}
-article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {display: block;}
-
-body{
-font: 12px/1.5 "メイリオ","Meiryo",arial,"ヒラギノ角ゴ Pro W3","Hiragino Kaku Gothic Pro",Osaka,"ＭＳ Ｐゴシック","MS PGothic",Sans-Serif;
-color:#333;
--webkit-text-size-adjust: none;
-background:#f2f2f2;
+/* line 6, /Users/tech-camp/training/app/assets/stylesheets/style.scss */
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td {
+  border: 0;
+  font-family: inherit;
+  font-size: 100%;
+  font-style: inherit;
+  font-weight: inherit;
+  margin: 0;
+  outline: 0;
+  padding: 0;
+  vertical-align: baseline;
 }
 
+/* line 7, /Users/tech-camp/training/app/assets/stylesheets/style.scss */
+:focus {
+  outline: 0;
+}
+
+/* line 9, /Users/tech-camp/training/app/assets/stylesheets/style.scss */
+ol, ul {
+  list-style: none;
+}
+
+/* line 10, /Users/tech-camp/training/app/assets/stylesheets/style.scss */
+table {
+  border-collapse: separate;
+  border-spacing: 0;
+}
+
+/* line 11, /Users/tech-camp/training/app/assets/stylesheets/style.scss */
+caption, th, td {
+  font-weight: normal;
+  text-align: left;
+}
+
+/* line 12, /Users/tech-camp/training/app/assets/stylesheets/style.scss */
+blockquote:before, blockquote:after, q:before, q:after {
+  content: "";
+}
+
+/* line 13, /Users/tech-camp/training/app/assets/stylesheets/style.scss */
+blockquote, q {
+  quotes: "" "";
+}
+
+/* line 14, /Users/tech-camp/training/app/assets/stylesheets/style.scss */
+a img {
+  border: 0;
+}
+
+/* line 15, /Users/tech-camp/training/app/assets/stylesheets/style.scss */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+/* line 17, /Users/tech-camp/training/app/assets/stylesheets/style.scss */
+body {
+  font: 12px/1.5 "メイリオ","Meiryo",arial,"ヒラギノ角ゴ Pro W3","Hiragino Kaku Gothic Pro",Osaka,"ＭＳ Ｐゴシック","MS PGothic",Sans-Serif;
+  color: #333;
+  -webkit-text-size-adjust: none;
+  background: #f5f5f5;
+}
+
+/* line 39, /Users/tech-camp/training/app/assets/stylesheets/style.scss */
+img,
+object,
+embed {
+  max-width: 100%;
+  height: auto;
+}
+
+/* line 45, /Users/tech-camp/training/app/assets/stylesheets/style.scss */
+object,
+embed {
+  height: 100%;
+}
 
 /* リンク設定
 ------------------------------------------------------------*/
-a{
-margin:0;
-padding:0;
-text-decoration:none;
-outline:0;
-vertical-align:baseline;
-background:transparent;
-font-size:100%;
-color:#313131;
+/* line 51, /Users/tech-camp/training/app/assets/stylesheets/style.scss */
+.itemtitle a {
+  color: black;
 }
 
-a:hover, a:active{
-outline: none;
-color:#6f6f6f;
+/* line 55, /Users/tech-camp/training/app/assets/stylesheets/style.scss */
+.post .item_links a {
+  color: white;
 }
 
+/* line 59, /Users/tech-camp/training/app/assets/stylesheets/style.scss */
+.post .item_links a:hover {
+  opacity: 0.7;
+  transition: 0.3s;
+}
+
+/* line 64, /Users/tech-camp/training/app/assets/stylesheets/style.scss */
+a {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  outline: 0;
+  vertical-align: baseline;
+  background: transparent;
+  font-size: 100%;
+}
+
+/* line 74, /Users/tech-camp/training/app/assets/stylesheets/style.scss */
+a:hover, a:active {
+  outline: none;
+  color: #6f6f6f;
+}
 
 /**** Clearfix ****/
-nav .panel:after, nav#mainNav:after, .newsTitle:after, .bg:after,.post:after, ul.post li:after,nav#mainNav .inner:after{content:""; display: table;clear: both;}
-nav .panel,nav#mainNav,.newsTitle,.bg, .post, ul.post li,nav#mainNav .inner{zoom: 1;}
+/* line 81, /Users/tech-camp/training/app/assets/stylesheets/style.scss */
+nav .panel:after, nav#mainNav:after, .newsTitle:after, .bg:after, .post:after, ul.post li:after, nav#mainNav .inner:after {
+  content: "";
+  display: table;
+  clear: both;
+}
 
+/* line 82, /Users/tech-camp/training/app/assets/stylesheets/style.scss */
+nav .panel, nav#mainNav, .newsTitle, .bg, .post, ul.post li, nav#mainNav .inner {
+  zoom: 1;
+}
 
 /* レイアウト
 ------------------------------------------------------------*/
-#wrapper, .inner{
-margin:0 auto;
-width:880px;
+/* line 87, /Users/tech-camp/training/app/assets/stylesheets/style.scss */
+#wrapper, .inner {
+  margin: 0 auto;
+  width: 880px;
 }
 
-#header{
-overflow:hidden;
+/* line 105, /Users/tech-camp/training/app/assets/stylesheets/style.scss */
+#content {
+  float: left;
+  width: 627px;
+  padding: 0 0 50px;
 }
 
-#content{
-float:right;
-width:627px;
-padding:22px 0 50px;
+/* line 111, /Users/tech-camp/training/app/assets/stylesheets/style.scss */
+#sidebar {
+  float: right;
+  width: 233px;
+  padding: 0 0 50px;
 }
 
-#sidebar{
-float:left;
-width:233px;
-padding:22px 0 50px;
+/* line 117, /Users/tech-camp/training/app/assets/stylesheets/style.scss */
+#footer {
+  clear: both;
+  background-color: white;
+  margin-top: 2px;
 }
 
-#footer{
-clear:both;
-} 
+/* line 127, /Users/tech-camp/training/app/assets/stylesheets/style.scss */
+#sidebar2 {
+  float: right;
+  width: 233px;
+  padding: 0 0 50px;
+  margin-top: 80px;
+}
 
+/* line 134, /Users/tech-camp/training/app/assets/stylesheets/style.scss */
+#content2 {
+  float: left;
+  width: 627px;
+  padding: 0 0 50px;
+  margin-top: 80px;
+}
+
+/* line 144, /Users/tech-camp/training/app/assets/stylesheets/style.scss */
+.search {
+  width: 100%;
+  margin: 80px auto 0px;
+}
 
 /* ヘッダー
 *****************************************************/
-
 /* サイト説明文
 ----------------------------------*/
-#header h1{
-padding:40px 0 0;
-font-size:80%;
-font-weight:normal;
-text-align:center;
-}
-
-
 /* ロゴ (サイトタイトル)
 ----------------------------------*/
-#header h2{
-clear:both;
-padding:5px 0 40px;
-color: #515151;
-font-size:150%;
-font-weight:bold;
-text-align:center;
-}
-
-
-
-/* トップページ　メイン画像
+/* 新規登録・ログインページへのリンク
 ----------------------------------*/
-#mainImg{
-clear:both;
-margin-top:20px;
-line-height:0;
-text-align:center;
-z-index:0;
+/* line 203, /Users/tech-camp/training/app/assets/stylesheets/style.scss */
+.post {
+  margin: 0 0 20px 0;
+  padding: 20px 10px 20px 20px;
+  border: 1px solid #d5d5d5;
+  background: #fff;
 }
 
-.post{
-margin:0 0 20px 0;
-padding:20px 10px 20px 20px;
-border:1px solid #d5d5d5;
-background: #fff;
+/* line 210, /Users/tech-camp/training/app/assets/stylesheets/style.scss */
+.toppage h4 {
+  margin: 0 0 10px;
+  font-size: 16px;
+  font-weight: normal;
+  color: #333;
 }
 
-.toppage h4{
-margin:0 0 10px;
-font-size:16px;
-font-weight:normal;
-color:#333;
+/* line 217, /Users/tech-camp/training/app/assets/stylesheets/style.scss */
+.toppage {
+  padding: 10px 10px 20px 20px;
 }
-
-.toppage{padding:10px 10px 20px 20px;}
-
 
 /* 記事
 *****************************************************/
-.list{
-padding:10px 0;
-border-bottom:1px dashed #dcdcdc;
+/* line 222, /Users/tech-camp/training/app/assets/stylesheets/style.scss */
+.list {
+  padding: 10px 0;
+  border-bottom: 1px dashed #dcdcdc;
 }
 
-.list:last-child{border:0;}
+/* line 227, /Users/tech-camp/training/app/assets/stylesheets/style.scss */
+.list:last-child {
+  border: 0;
+}
 
-.post .list p{padding:0;}
+/* line 229, /Users/tech-camp/training/app/assets/stylesheets/style.scss */
+.post .list p {
+  padding: 0;
+}
 
-.list span{padding-left:10px;}
-
+/* line 231, /Users/tech-camp/training/app/assets/stylesheets/style.scss */
+.list span {
+  padding-left: 10px;
+}
 
 /* タイポグラフィ
 *****************************************************/
-h2.title{
-clear:both;
-margin:0;
-padding:7px 10px 7px 10px;
-font-size:110%;
-color:#000;
-border:1px solid #d5d5d5;
-border-bottom:0;
-background:#fff url(images/headingBg.png) repeat-x 0 100%;
+/* line 236, /Users/tech-camp/training/app/assets/stylesheets/style.scss */
+h2.title {
+  clear: both;
+  margin: 0;
+  padding: 7px 10px 7px 10px;
+  font-size: 110%;
+  color: #fff;
+  border: 1px solid #d5d5d5;
+  border-radius: 10px 10px 0 0;
+  border-bottom: 0;
+  background-color: black;
 }
 
-.dateLabel{
-text-align:right;
-font-weight:bold;
-color:#858585;
+/* line 248, /Users/tech-camp/training/app/assets/stylesheets/style.scss */
+.dateLabel {
+  text-align: right;
+  font-weight: bold;
+  color: #858585;
 }
 
-.post p{padding-bottom:15px;}
-
-.post ul{margin: 0 0 10px 10px;}
-
-.post ul li{
-margin-bottom:5px;
-padding-left:15px;
-background:url(images/bullet.png) no-repeat 0 8px;
+/* line 254, /Users/tech-camp/training/app/assets/stylesheets/style.scss */
+.post p {
+  padding-bottom: 15px;
 }
 
-.post ol{margin: 0 0 10px 30px;}
-
-.post ol li{list-style:decimal;}
-
-.post h1{
-margin:20px 0;
-padding:5px 0;
-font-size:150%;
-color: #000;
-border-bottom:3px solid #000;
+/* line 258, /Users/tech-camp/training/app/assets/stylesheets/style.scss */
+.post ul {
+  margin: 0 0 10px 10px;
 }
 
-.post h2{
-margin:10px 0;
-padding-bottom:2px;
-font-size:130%;
-font-weight:normal;
-color: #333;
-border-bottom:2px solid #515151;
+/* line 260, /Users/tech-camp/training/app/assets/stylesheets/style.scss */
+.post ul li {
+  margin-bottom: 5px;
+  padding-left: 15px;
+  background: url(images/bullet.png) no-repeat 0 8px;
 }
 
-.post h3{
-margin:10px 0;
-font-size:100%;
-font-weight:normal;
-color:#2e2c2c;
-border-bottom:1px solid #515151;
+/* line 266, /Users/tech-camp/training/app/assets/stylesheets/style.scss */
+.post ol {
+  margin: 0 0 10px 30px;
 }
 
+/* line 268, /Users/tech-camp/training/app/assets/stylesheets/style.scss */
+.post ol li {
+  list-style: decimal;
+}
+
+/* line 270, /Users/tech-camp/training/app/assets/stylesheets/style.scss */
+.post h1 {
+  margin: 20px 0;
+  padding: 5px 0;
+  font-size: 150%;
+  color: #000;
+  border-bottom: 3px solid #000;
+}
+
+/* line 278, /Users/tech-camp/training/app/assets/stylesheets/style.scss */
+.post h2 {
+  margin: 10px 0;
+  font-size: 250%;
+  font-weight: bold;
+  color: #000000;
+  border-bottom: 1px solid #515151;
+}
+
+/* line 286, /Users/tech-camp/training/app/assets/stylesheets/style.scss */
+.post h3 {
+  margin: 30px 0;
+  font-size: 150%;
+  font-weight: bold;
+  color: #000000;
+  border-bottom: 1px solid #515151;
+}
+
+/* line 294, /Users/tech-camp/training/app/assets/stylesheets/style.scss */
+.post h3 a {
+  color: black;
+}
+
+/* line 298, /Users/tech-camp/training/app/assets/stylesheets/style.scss */
+.post {
+  border-radius: 0 0 10px 10px;
+}
+
+/* line 302, /Users/tech-camp/training/app/assets/stylesheets/style.scss */
+.post .point {
+  float: left;
+}
+
+/* line 306, /Users/tech-camp/training/app/assets/stylesheets/style.scss */
+.post .point p {
+  font-size: 120%;
+}
+
+/* line 314, /Users/tech-camp/training/app/assets/stylesheets/style.scss */
 .post blockquote {
-clear:both;
-padding:10px 0 10px 15px;
-margin:10px 0 25px 30px;
-border-left:5px solid #ccc;
-}
- 
-.post blockquote p{padding:5px 0;}
-
-.post table{
-border: 1px #ccc solid;
-border-collapse: collapse;
-border-spacing: 0;
-margin:10px 0 20px;
+  clear: both;
+  padding: 10px 0 10px 15px;
+  margin: 10px 0 25px 30px;
+  border-left: 5px solid #ccc;
 }
 
-.post table th{
-padding:10px;
-border: #ccc solid;
-border-width: 0 0 1px 1px;
-background:#f2f2f2;
+/* line 321, /Users/tech-camp/training/app/assets/stylesheets/style.scss */
+.post blockquote p {
+  padding: 5px 0;
 }
 
-.post table td{
-padding:10px;
-border: 1px #ccc solid;
-border-width: 0 0 1px 1px;
-background:#fff;
+/* line 323, /Users/tech-camp/training/app/assets/stylesheets/style.scss */
+.post table {
+  border: 1px #ccc solid;
+  border-collapse: collapse;
+  border-spacing: 0;
+  margin: 0;
+  clear: both;
 }
 
-.post dt{font-weight:bold;}
+/* line 331, /Users/tech-camp/training/app/assets/stylesheets/style.scss */
+.post table th {
+  padding: 10px;
+  border: #ccc solid;
+  border-width: 0 0 1px 1px;
+  background: #f2f2f2;
+}
 
-.post dd{padding-bottom:10px;}
+/* line 338, /Users/tech-camp/training/app/assets/stylesheets/style.scss */
+.post table td {
+  padding: 10px;
+  border: 1px #ccc solid;
+  border-width: 0 0 1px 1px;
+  background: #fff;
+}
 
-.post img{max-width:100%;height:auto;}
+/* line 345, /Users/tech-camp/training/app/assets/stylesheets/style.scss */
+.post dt {
+  font-weight: bold;
+}
 
+/* line 347, /Users/tech-camp/training/app/assets/stylesheets/style.scss */
+.post dd {
+  padding-bottom: 10px;
+}
+
+/* line 349, /Users/tech-camp/training/app/assets/stylesheets/style.scss */
+.post img {
+  max-width: 100%;
+  height: auto;
+  padding: 1px;
+  border: thin solid #d3d3d3;
+  float: left;
+  margin-bottom: 20px;
+  margin-right: 20px;
+}
+
+/* line 359, /Users/tech-camp/training/app/assets/stylesheets/style.scss */
+.post .item_links {
+  margin-top: 40px;
+}
+
+/* line 363, /Users/tech-camp/training/app/assets/stylesheets/style.scss */
+.post .itemlink1 {
+  border-radius: .3em;
+  border-style: solid;
+  border-width: 1px;
+  background-color: red;
+  display: inline-block;
+  font-family: avenir,helvetica,arial,sans-serif;
+  letter-spacing: .15em;
+  margin-bottom: .5em;
+  margin-right: .5em;
+  padding: 1em .75em;
+  text-decoration: none;
+  text-transform: uppercase;
+  -webkit-transition: color .4s,background-color .4s,border .4s;
+  transition: color .4s,background-color .4s,border .4s;
+  font-size: 12px;
+  transition: 0.3s;
+}
+
+/* line 382, /Users/tech-camp/training/app/assets/stylesheets/style.scss */
+.post .itemlink2 {
+  border-radius: .3em;
+  border-style: solid;
+  border-width: 1px;
+  background-color: gray;
+  display: inline-block;
+  font-family: avenir,helvetica,arial,sans-serif;
+  letter-spacing: .15em;
+  margin-bottom: .5em;
+  margin-right: .5em;
+  padding: 1em .75em;
+  text-decoration: none;
+  text-transform: uppercase;
+  -webkit-transition: color .4s,background-color .4s,border .4s;
+  transition: color .4s,background-color .4s,border .4s;
+  font-size: 12px;
+  transition: 0.3s;
+}
+
+/* line 401, /Users/tech-camp/training/app/assets/stylesheets/style.scss */
+.post .itemlink3 {
+  border-radius: .3em;
+  border-style: solid;
+  border-width: 1px;
+  background-color: orange;
+  display: inline-block;
+  font-family: avenir,helvetica,arial,sans-serif;
+  letter-spacing: .15em;
+  margin-bottom: .5em;
+  margin-right: .5em;
+  padding: 1em .75em;
+  text-decoration: none;
+  text-transform: uppercase;
+  -webkit-transition: color .4s,background-color .4s,border .4s;
+  transition: color .4s,background-color .4s,border .4s;
+  font-size: 12px;
+  transition: 0.3s;
+}
+
+/* line 420, /Users/tech-camp/training/app/assets/stylesheets/style.scss */
+.post .itemlink4 {
+  border-radius: .3em;
+  border-style: solid;
+  border-width: 1px;
+  background-color: green;
+  display: inline-block;
+  font-family: avenir,helvetica,arial,sans-serif;
+  letter-spacing: .15em;
+  margin-bottom: .5em;
+  margin-right: .5em;
+  padding: 1em .75em;
+  text-decoration: none;
+  text-transform: uppercase;
+  -webkit-transition: color .4s,background-color .4s,border .4s;
+  transition: color .4s,background-color .4s,border .4s;
+  font-size: 12px;
+  transition: 0.3s;
+}
+
+/* line 443, /Users/tech-camp/training/app/assets/stylesheets/style.scss */
+.reviews h4 {
+  margin: 30px 0;
+  font-size: 120%;
+  font-weight: bold;
+  color: #000000;
+}
+
+/* line 458, /Users/tech-camp/training/app/assets/stylesheets/style.scss */
+.regi {
+  padding: 1% 2% 1%;
+  background-color: #32CD32;
+  color: white;
+  border-radius: 3px;
+}
+
+/* line 465, /Users/tech-camp/training/app/assets/stylesheets/style.scss */
+.field .comment {
+  display: block;
+  width: 80%;
+  height: 34px;
+  padding: 6px 12px;
+  font-size: 14px;
+  line-height: 1.428571429;
+  color: #555;
+  vertical-align: middle;
+  background-color: #fff;
+  background-image: none;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  -webkit-transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+  transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+}
+
+/* line 484, /Users/tech-camp/training/app/assets/stylesheets/style.scss */
 img.aligncenter {
-display: block;
-margin:5px auto;
+  display: block;
+  margin: 5px auto;
 }
 
-img.alignright, img.alignleft{
-margin: 10px 10px 15px 15px;
-display:inline;
+/* line 489, /Users/tech-camp/training/app/assets/stylesheets/style.scss */
+img.alignright, img.alignleft {
+  margin: 10px 10px 15px 15px;
+  display: inline;
 }
 
-img.alignleft{margin:10px 15px 15px 10px;}
-
-.alignright{float:right;}
-.alignleft{float:left;}
-
-#gallery-1 img{
-border:1px solid #eaeaea !important;
-padding:5px;
-background:#fff;
+/* line 494, /Users/tech-camp/training/app/assets/stylesheets/style.scss */
+img.alignleft {
+  margin: 10px 15px 15px 10px;
 }
 
-#gallery-1 img:hover{background:#fffaef;}
+/* line 496, /Users/tech-camp/training/app/assets/stylesheets/style.scss */
+.alignright {
+  float: right;
+}
 
+/* line 497, /Users/tech-camp/training/app/assets/stylesheets/style.scss */
+.alignleft {
+  float: left;
+}
 
+/* line 499, /Users/tech-camp/training/app/assets/stylesheets/style.scss */
+#gallery-1 img {
+  border: 1px solid #eaeaea !important;
+  padding: 5px;
+  background: #fff;
+}
+
+/* line 505, /Users/tech-camp/training/app/assets/stylesheets/style.scss */
+#gallery-1 img:hover {
+  background: #fffaef;
+}
 
 /* サイドバー　ウィジェット
 *****************************************************/
-section.widget ul, .widget_search, #calendar_wrap, .textwidget{
-margin:0 0 20px 0;
-padding:10px 10px 10px 17px;
-border:1px solid #d5d5d5;
-background: #fff;
+/* line 511, /Users/tech-camp/training/app/assets/stylesheets/style.scss */
+section.widget ul, .widget_search, #calendar_wrap, .textwidget, .submit {
+  margin: 0 0 20px 0;
+  padding: 10px 10px 10px 17px;
+  border: 1px solid #d5d5d5;
+  background: #fff;
+  border-radius: 0 0 10px 10px;
 }
 
-section.widget ul ul{
-border:0;
-margin:0;
-padding:0 0 0 10px;
+/* line 519, /Users/tech-camp/training/app/assets/stylesheets/style.scss */
+.submit {
+  text-align: center;
 }
 
-section.widget h3{
-clear:both;
-margin:0;
-padding:7px 10px 7px 10px;
-font-size:110%;
-border:1px solid #d5d5d5;
-border-bottom:0;
-color:#000;
-background:#fff url(images/headingBg.png) repeat-x 0 100%;
+/* line 523, /Users/tech-camp/training/app/assets/stylesheets/style.scss */
+section.widget ul ul {
+  border: 0;
+  margin: 0;
+  padding: 0 0 0 10px;
 }
 
-section.widget li a{
-display:block;
-padding:7px 0 7px 12px;
-background:url(images/arrow.gif) no-repeat 0 12px;
-border-bottom:1px dashed #dcdcdc;
+/* line 529, /Users/tech-camp/training/app/assets/stylesheets/style.scss */
+section.widget h3, section.Login h3 {
+  clear: both;
+  margin: 0;
+  padding: 7px 10px 7px 10px;
+  font-size: 110%;
+  border: 1px solid #d5d5d5;
+  border-bottom: 0;
+  border-radius: 10px 10px 0 0;
+  background-color: black;
+  color: #fff;
 }
 
-section.widget li:last-child a{border:0;}
-
-#searchform input[type="text"]{
-line-height:1.7;
-height:24px;
-width:90px;
-vertical-align:bottom;
+/* line 541, /Users/tech-camp/training/app/assets/stylesheets/style.scss */
+section.widget li a {
+  display: block;
+  padding: 7px 0 7px 12px;
+  border-bottom: 1px dashed #dcdcdc;
+  color: gray;
 }
 
+/* line 548, /Users/tech-camp/training/app/assets/stylesheets/style.scss */
+section.widget li:last-child a {
+  border: 0;
+}
+
+/* line 550, /Users/tech-camp/training/app/assets/stylesheets/style.scss */
+#searchform input[type="text"] {
+  line-height: 1.7;
+  height: 24px;
+  width: 90px;
+  vertical-align: bottom;
+}
+
+/* line 557, /Users/tech-camp/training/app/assets/stylesheets/style.scss */
+.amazon_ad_tag {
+  margin: 0 auto 10px;
+  width: 180px;
+  height: 150px;
+}
 
 /* お知らせ　
 -------------*/
-.newsTitle{
-clear:both;
-margin:0;
-padding:7px 10px 7px 10px;
-font-size:110%;
-border:1px solid #d5d5d5;
-border-bottom:0;
-color:#000;
-background:#fff url(images/headingBg.png) repeat-x 0 100%;
+/* line 566, /Users/tech-camp/training/app/assets/stylesheets/style.scss */
+.newsTitle {
+  clear: both;
+  margin: 0;
+  padding: 7px 10px 7px 10px;
+  font-size: 110%;
+  border: 1px solid #d5d5d5;
+  border-bottom: 0;
+  border-radius: 10px 10px 0 0;
+  background-color: black;
+  color: #fff;
 }
 
-.newsTitle h3{
-float:left;
-font-weight:normal;
+/* line 578, /Users/tech-camp/training/app/assets/stylesheets/style.scss */
+.newsTitle h3 {
+  float: left;
+  font-weight: normal;
 }
 
-.newsTitle p{
-float:right;
-padding:0 0 0 10px;
-font-size:80%;
-background:url(images/arrow.gif) no-repeat 0 5px;
+/* line 583, /Users/tech-camp/training/app/assets/stylesheets/style.scss */
+.newsTitle p {
+  float: right;
+  padding: 0 0 0 10px;
+  font-size: 80%;
+  color: white;
 }
 
-.news p{
-clear:both;
-padding-bottom:2px;
-border-bottom:1px dashed #dcdcdc;
+/* line 590, /Users/tech-camp/training/app/assets/stylesheets/style.scss */
+.newsTitle a {
+  color: white;
 }
 
-.news p:last-child{border:0;}
-
-.news p a{
-display:block;
-padding:5px 0;
-color:#333;
-font-style:italic;
-font:italic 110% "Palatino Linotype", "Book Antiqua", Palatino, serif;
+/* line 594, /Users/tech-camp/training/app/assets/stylesheets/style.scss */
+.news p {
+  clear: both;
+  padding-bottom: 2px;
+  border-bottom: 1px dashed #dcdcdc;
 }
 
-.news a span{
-color:#515151;
-font:normal 90% Arial, 'ヒラギノ角ゴ Pro W3','Hiragino Kaku Gothic Pro','ＭＳ Ｐゴシック',sans-serif;
+/* line 600, /Users/tech-camp/training/app/assets/stylesheets/style.scss */
+.news p:last-child {
+  border: 0;
 }
 
-.news span{padding-left:10px;}
+/* line 602, /Users/tech-camp/training/app/assets/stylesheets/style.scss */
+.news p a {
+  display: block;
+  padding: 5px 0;
+  color: gray;
+  font-style: italic;
+  font: italic 110% "Palatino Linotype", "Book Antiqua", Palatino, serif;
+}
 
-.news a:hover span{color:#6f6f6f;}
+/* line 610, /Users/tech-camp/training/app/assets/stylesheets/style.scss */
+.news a span {
+  color: #515151;
+  font: normal 90% Arial, 'ヒラギノ角ゴ Pro W3','Hiragino Kaku Gothic Pro','ＭＳ Ｐゴシック',sans-serif;
+}
 
+/* line 615, /Users/tech-camp/training/app/assets/stylesheets/style.scss */
+.news span {
+  padding-left: 10px;
+}
 
+/* line 617, /Users/tech-camp/training/app/assets/stylesheets/style.scss */
+.news a:hover span {
+  color: #6f6f6f;
+}
 
 /* フッター
 *****************************************************/
-
-#copyright{
-clear:both;
-padding:10px 0 37px;
-text-align:center;
-color:#000;
-font-size:10px;
+/* line 624, /Users/tech-camp/training/app/assets/stylesheets/style.scss */
+#footer {
+  background-color: black;
 }
 
+/* line 628, /Users/tech-camp/training/app/assets/stylesheets/style.scss */
+#footer p {
+  color: white;
+}
+
+/* line 632, /Users/tech-camp/training/app/assets/stylesheets/style.scss */
+#copyright {
+  clear: both;
+  padding: 10%;
+  text-align: center;
+  color: #000;
+  font-size: 10px;
+}
 
 /* page navigation
 ------------------------------------------------------------*/
-.pagenav{
-clear:both;
-width: 100%;
-height: 30px;
-margin: 5px 0 20px;
+/* line 643, /Users/tech-camp/training/app/assets/stylesheets/style.scss */
+.pagenav {
+  clear: both;
+  width: 100%;
+  height: 30px;
+  margin: 5px 0 20px;
 }
 
-.prev{float:left}
-
-.next{float:right;}
-
-#pageLinks{
-clear:both;
-color:#4f4d4d;
-text-align:center;
+/* line 650, /Users/tech-camp/training/app/assets/stylesheets/style.scss */
+.page.current {
+  font-family: 'CODE bold';
+  margin: 0 3px;
 }
 
+/* line 655, /Users/tech-camp/training/app/assets/stylesheets/style.scss */
+.page a {
+  font-family: 'CODE bold';
+  margin: 0 3px;
+}
+
+/* line 660, /Users/tech-camp/training/app/assets/stylesheets/style.scss */
+.prev {
+  float: left;
+}
+
+/* line 662, /Users/tech-camp/training/app/assets/stylesheets/style.scss */
+.prev a {
+  font-family: 'CODE bold';
+  margin: 0 3px;
+}
+
+/* line 667, /Users/tech-camp/training/app/assets/stylesheets/style.scss */
+.next {
+  float: right;
+}
+
+/* line 669, /Users/tech-camp/training/app/assets/stylesheets/style.scss */
+.next a {
+  font-family: 'CODE bold';
+  letter-spacing: 2px;
+  margin: 0 3px;
+}
+
+/* line 675, /Users/tech-camp/training/app/assets/stylesheets/style.scss */
+.last a {
+  font-family: 'CODE bold';
+  letter-spacing: 2px;
+  margin: 0 3px;
+}
+
+/* line 681, /Users/tech-camp/training/app/assets/stylesheets/style.scss */
+.first a {
+  font-family: 'CODE bold';
+  letter-spacing: 2px;
+  margin: 0 3px;
+}
+
+/* line 687, /Users/tech-camp/training/app/assets/stylesheets/style.scss */
+#pageLinks {
+  clear: both;
+  color: #4f4d4d;
+  text-align: center;
+}
 
 /* トップページ 最新記事4件
 ------------------------------------------------------------*/
-ul.post{
-padding:0;
+/* line 696, /Users/tech-camp/training/app/assets/stylesheets/style.scss */
+ul.post {
+  padding: 0;
 }
 
-ul.post li{
-margin:0 10px;
-padding:20px 0 15px;
-border-bottom:1px dashed #dcdcdc;
+/* line 700, /Users/tech-camp/training/app/assets/stylesheets/style.scss */
+ul.post li {
+  margin: 0 10px;
+  padding: 20px 0 15px;
+  border-bottom: 1px dashed #dcdcdc;
 }
 
-ul.post li:last-child{border:0;}
-
-ul.post img{
-float:left;
-margin:0 15px 5px 10px;
+/* line 706, /Users/tech-camp/training/app/assets/stylesheets/style.scss */
+ul.post li:last-child {
+  border: 0;
 }
 
-ul.post h3{
-margin:0 0 10px 10px;
-font-size:14px;
-font-weight:normal;
-color:#333;
-border:0;
+/* line 708, /Users/tech-camp/training/app/assets/stylesheets/style.scss */
+ul.post img {
+  float: left;
+  margin: 0 15px 5px 10px;
 }
 
+/* line 713, /Users/tech-camp/training/app/assets/stylesheets/style.scss */
+ul.post h3 {
+  margin: 0 0 10px 10px;
+  font-size: 150%;
+  font-weight: bold;
+  color: #333;
+  border-bottom: thin dotted;
+  overflow: hidden;
+}
 
-/* メインメニュー　PC用
+/* メニュー
 ------------------------------------------------------------*/
-@media only screen and (min-width: 1025px){
-  nav#mainNav{
-	clear:both;
-	position:relative;
-	z-index:200;
-	width:100%;
-	}
-	
-	nav#mainNav .inner{
-	padding-left:1px;
-	background:url(images/mainNavSep.png) no-repeat 0 5px;
-	}
-
-	nav#mainNav ul li{
-	float: left;
-	position: relative;
-	background:url(images/mainNavSep.png) no-repeat 100% 5px;
-	}
-	
-	nav#mainNav ul li a{
-	display: block;
-	text-align: center;
-	_float:left;
-	color:#000;
-	height:35px;
-	line-height:45px;
-	font-size:110%;
-	margin-right:1px;
-	padding:10px 40px 0;
-	}
-	
-	nav#mainNav ul li a span,nav#mainNav ul li a strong{
-	display:block;
-	font-size:90%;
-	line-height:1.4;
-	}
-	
-	nav#mainNav ul li a span{
-	font-size:70%;
-	color:#888;
-	font-weight:normal;
-	font-family:"Times New Roman", Times, serif;
-	}
-
-	nav div.panel{
-  display:block !important;
-  float:left;
-  }
-  
-  a#menu{display:none;}
-  
-  nav#mainNav ul li.current-menu-item a, nav#mainNav ul li a:hover span, nav#mainNav ul li a:hover, nav#mainNav ul li.current-menu-parent a{
-  color:#4c4c4c;
-  }
-  
-  nav#mainNav ul ul{
-	width:160px;
-	border:1px solid #e0e0e0;
-	border-top:0;
-	}
-  
-  nav#mainNav ul li ul{display: none;}
-  
-  nav#mainNav ul li:hover ul{
-  display: block;
-  position: absolute;
-  top:42px;
-  left:-1px;
-  z-index:500;
-  }
-	
-  nav#mainNav ul li li{
-	margin:0;
-  float: none;
-  height:40px;
-  line-height:40px;
-  width:160px;
-	background:#f2f2f2;
-	border-bottom:1px dotted #e0e0e0;
-  }
-	
-	nav#mainNav ul li li:last-child{border:0;}
-	
-  nav#mainNav ul li li a{
-  width:100%;
-  height:40px;
-	padding:0 0 0 10px;
-  line-height:40px;
-  font-size:95%;
-  text-align:left;
-  }
-	
-	nav#mainNav ul li li.current-menu-item a,nav#mainNav ul li li a:hover{color:#6f6f6f}
-
-}
-
-/* メインメニュー iPadサイズ以下から
-------------------------------------------------------------*/
-@media only screen and (max-width:1024px){
-	nav#mainNav{
-	clear:both;
-	width:880px;
-	margin:0 auto 10px;
-	border:1px solid #d5d5d5;
-	}
-	
-	nav#mainNav a.menu{
-	width:100%;
-	display:block;
-	height:37px;
-	line-height:37px;
-	font-weight: bold;
-	text-align:left;
-  background: url(images/menuOpen.png) no-repeat 5px 8px;
-	}
-	
-	nav#mainNav a#menu span{padding-left:35px;}
-	
-	nav#mainNav a.menuOpen{
-	background: url(images/menuOpen.png) no-repeat 5px -34px;
-	}
-	
-	nav#mainNav a#menu:hover{cursor:pointer;}
-	
-	nav .panel{
-	display: none;
-	width:100%;
-	position: relative;
-	right: 0;
-	top:0;
-	z-index: 1;
-	}
-
-	nav#mainNav ul{margin:0;padding:0;}
-
-	nav#mainNav ul li{
-	float: none;
-	clear:both;
-	width:100%;
-	height:auto;
-	line-height:1.2;
-	}
-
-	nav#mainNav ul li:first-child{border-top:1px solid #d5d5d5;}
-	nav#mainNav ul li li:first-child{border-top:0;}
-
-	nav#mainNav ul li a,nav#mainNav ul li.current-menu-item li a{
-	display: block;
-	padding:15px 10px;
-	text-align:left;
-	border-bottom:1px dashed #ccc;
-	background:#fff;
-	}
-	
-	nav#mainNav ul li:last-child a{border:0;}
-	nav#mainNav ul li li:last-child a{border:0;}
-	nav#mainNav ul li li:last-child a{border-bottom:1px dashed #ccc;}
-
- 	nav#mainNav ul li a span{display:none;}
- 
-	nav#mainNav ul li.current-menu-item a,nav#mainNav ul li a:hover,nav#mainNav ul li.current-menu-item a,nav#mainNav ul li a:active, nav#mainNav ul li li.current-menu-item a, nav#mainNav ul li.current-menu-item li a:hover, nav#mainNav ul li.current-menu-item li a:active{
-	background:#f6f6f6;
-	}
-
-	nav#mainNav ul li li{
-	float:left;
-	border:0;
-	}
-
-	nav#mainNav ul li li a, nav#mainNav ul li.current-menu-item li a, nav#mainNav ul li li.current-menu-item a{
-  padding-left:40px;
-	background:#fff url(images/sub1.png) no-repeat 20px 18px;}
-
-	nav#mainNav ul li li.current-menu-item a,nav#mainNav ul li li a:hover, nav#mainNav ul li.current-menu-item li a:hover{
-		background:#f6f6f6 url(images/sub1.png) no-repeat 20px -62px;}
-	
-	nav#mainNav ul li li:last-child a{background:#fff url(images/subLast.png) no-repeat 20px 20px;}
-	nav#mainNav ul li li:last-child.current-menu-item a,nav#mainNav ul li li:last-child a:hover,nav#mainNav ul li.current-menu-item li:last-child a:hover{background:#f6f6f6 url(images/subLast.png) no-repeat 20px -65px;}
-	
-	nav div.panel{float:none;}
-	
-	#mainImg{margin-bottom:20px;}
-}
-
-
 /* 959px以下から 1カラム表示
 ------------------------------------------------------------*/
-@media only screen and (max-width: 959px){
-  #wrapper, .inner{width:100%;}
+@media only screen and (max-width: 959px) {
+  /* line 730, /Users/tech-camp/training/app/assets/stylesheets/style.scss */
+  #wrapper, .inner {
+    width: 100%;
+  }
 
-	#header{width:96%;padding:0 2%;}
-	
-	.contact{padding:10px 0 10px;}
+  /* line 732, /Users/tech-camp/training/app/assets/stylesheets/style.scss */
+  .search {
+    width: 95%;
+  }
 
-  nav#mainNav{width:95%;}
+  /* line 736, /Users/tech-camp/training/app/assets/stylesheets/style.scss */
+  .content {
+    margin-top: 80px;
+  }
 
-	nav#mainNav ul{margin:0 auto;}
-	nav#mainNav ul ul{padding:0;}
+  /* line 742, /Users/tech-camp/training/app/assets/stylesheets/style.scss */
+  .contact {
+    padding: 10px 0 10px;
+  }
 
-	nav div.panel{float:none;}
-	
-	#mainImg img{width:98%;height:auto;}
+  /* line 744, /Users/tech-camp/training/app/assets/stylesheets/style.scss */
+  nav#mainNav {
+    width: 95%;
+  }
 
-	#content, #sidebar{clear:both;width:95%;float:none;margin:0 auto;padding:10px 0;	}
-	
-	.banner{width:100%;margin:0 auto;text-align:center;}
-  p.banner img{width:100%;height:auto;}
-	section.widget_search{text-align:center;}
-	#calendar_wrap table{width:260px;}
-	
-	#footer li{margin-bottom:10px;}
-	
+  /* line 746, /Users/tech-camp/training/app/assets/stylesheets/style.scss */
+  nav#mainNav ul {
+    margin: 0 auto;
+  }
+
+  /* line 747, /Users/tech-camp/training/app/assets/stylesheets/style.scss */
+  nav#mainNav ul ul {
+    padding: 0;
+  }
+
+  /* line 749, /Users/tech-camp/training/app/assets/stylesheets/style.scss */
+  nav div.panel {
+    float: none;
+  }
+
+  /* line 751, /Users/tech-camp/training/app/assets/stylesheets/style.scss */
+  #mainImg img {
+    width: 98%;
+    height: auto;
+  }
+
+  /* line 753, /Users/tech-camp/training/app/assets/stylesheets/style.scss */
+  #content, #sidebar, #content2, #sidebar2 {
+    clear: both;
+    width: 95%;
+    float: none;
+    margin: 0 auto;
+    padding: 0 0;
+  }
+
+  /* line 755, /Users/tech-camp/training/app/assets/stylesheets/style.scss */
+  .banner {
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  /* line 756, /Users/tech-camp/training/app/assets/stylesheets/style.scss */
+  p.banner img {
+    width: 100%;
+    height: auto;
+  }
+
+  /* line 757, /Users/tech-camp/training/app/assets/stylesheets/style.scss */
+  section.widget_search {
+    text-align: center;
+  }
+
+  /* line 758, /Users/tech-camp/training/app/assets/stylesheets/style.scss */
+  #calendar_wrap table {
+    width: 260px;
+  }
+
+  /* line 760, /Users/tech-camp/training/app/assets/stylesheets/style.scss */
+  #footer li {
+    margin-bottom: 10px;
+  }
 }
-
-
 /* 幅644px以下から ヘッダー等微調節
 ------------------------------------------------------------*/
-@media only screen and (max-width: 644px){
-	nav#mainNav{width:98%;}
-	#header{text-align:center;background-image:none;}
-	#header h2,.contact{float:none;}
-	.contact{padding:0 0 20px;}
-	.contact p{text-align:center;}
-	#headerInfo{width:250px;margin:0 auto;}
-	img.alignright, img.alignleft{display: block;	margin:5px auto;}
-	.alignright,.alignleft{float:none;}
+@media only screen and (max-width: 644px) {
+  /* line 767, /Users/tech-camp/training/app/assets/stylesheets/style.scss */
+  .content {
+    margin-top: 80px;
+  }
+
+  /* line 770, /Users/tech-camp/training/app/assets/stylesheets/style.scss */
+  nav#mainNav {
+    width: 98%;
+  }
+
+  /* line 773, /Users/tech-camp/training/app/assets/stylesheets/style.scss */
+  .contact {
+    padding: 0 0 20px;
+  }
+
+  /* line 774, /Users/tech-camp/training/app/assets/stylesheets/style.scss */
+  .contact p {
+    text-align: center;
+  }
+
+  /* line 775, /Users/tech-camp/training/app/assets/stylesheets/style.scss */
+  #headerInfo {
+    width: 250px;
+    margin: 0 auto;
+  }
+
+  /* line 776, /Users/tech-camp/training/app/assets/stylesheets/style.scss */
+  img.alignright, img.alignleft {
+    display: block;
+    margin: 5px auto;
+  }
+
+  /* line 777, /Users/tech-camp/training/app/assets/stylesheets/style.scss */
+  .alignright, .alignleft {
+    float: none;
+  }
 }
+
