@@ -22,7 +22,4 @@ class TrainsController < ApplicationController
 
   def destroy
   end
-
-
-
 end

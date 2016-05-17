@@ -48,3 +48,4 @@ group :development do
   gem 'sprockets', '2.11.0'
 end
 
+gem 'devise'
