@@ -22,4 +22,8 @@ class TrainsController < ApplicationController
 
   def destroy
   end
+
+  private
+  def trains_params
+  end
 end
