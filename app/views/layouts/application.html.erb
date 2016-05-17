@@ -33,11 +33,37 @@
 <body>
 
 <!-- ヘッダー -->
+<header id="top-head">
+    <div class="headinner">
+        <div id="mobile-head">
+            <h1>筋トレ・健康グッズの口コミNo.1 サイト</h1>
+            <h2><a href="/">Training &amp; Co.</a></h2>
+            <div id="nav-toggle">
+                <div>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+        <nav id="global-nav">
+            <ul>
+                
+                <li>                      <a class="user" href="/users/sign_in">ログイン</a>
+                      <a class="user" href="/users/sign_up">新規登録</a>
+                    </li>
+            </ul>
+        </nav>
+    </div>
+</header>
 
 
 <%= yield %>
 
-<!-- フッター -->
+<footer id="footer">
+  <p id="copyright">Copyright © Training &amp; Co. All rights Reserved.
+</p></footer>
+
 
 
 </body>
