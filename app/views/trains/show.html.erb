@@ -34,7 +34,36 @@
           <a href="" class="itemlink3">ポンパレモール<a>
           <a href="" class="itemlink4">楽  天<a>
           </div>
+<<<<<<< HEAD
 
+=======
+          <h3>商品レビュー</h3>
+          <div class="reviews">
+            <% @reviews.each do |review| %>
+              <div class="review">
+                <div class="review-header clearfix">
+                  <h4><%= review.title %></h4>
+                  <div class="review-meta">
+                    <span class="review-point">
+                      評価
+                      <span>★★★☆☆(<%= review.rate %>点)</span>
+                    </span>
+                    <span class="review-user"><%= review.user.nickname %></span>
+                  </div>
+                </div>
+                <div class="review-comment">
+                  <%= simple_format(review.review, :class => "itemtext") %>
+                </div>
+              </div>
+            <% end %>
+          </div>
+          <% if user_signed_in? %>
+          <%= render :partial => "reviews/form" %>
+          <% else %>
+           <%= link_to ">> 新規登録してレビューを書く", new_user_registration_path, class: 'regi' %>
+           <%= link_to ">> ログインしてレビューを書く", new_user_session_path, class: 'log' %>
+          <% end %>
+>>>>>>> 914cab9f72d4506f82b087c025201e13761b761f
         </div>
       </article>
     </section>
@@ -69,8 +98,3 @@
   </aside>
 
 </div>
-
-<!-- フッター -->
-<footer id="footer">
-  <p id="copyright">Copyright &copy; Training & Co. All rights Reserved.
-</footer>
