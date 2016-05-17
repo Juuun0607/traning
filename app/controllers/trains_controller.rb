@@ -5,7 +5,8 @@ class TrainsController < ApplicationController
   end
 
   def show
-    @train = Train.find(1)
+    @train = Train.includes(:reviews).find(1)
+    @reviews = @train.reviews
     @review = Review.new
   end
 
