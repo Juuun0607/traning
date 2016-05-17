@@ -479,7 +479,7 @@ h2.title {
 .review{
   min-height: 30px;
   margin: 4px auto;
-  border-bottom: 1px solid #eee;
+  /*border-bottom: 1px solid #eee;*/
 }
 
 .review-header{
@@ -492,6 +492,7 @@ h2.title {
 
 
 .review-meta{
+  line-height: 22px;
   float: left;
 }
 
