@@ -13,10 +13,10 @@
     <%= search_form_for @q do |f| %>
       <div class="control-group">
         <div class="controls">
-          <%= f.text_field :title_or_text_cont, placeholder: "商品名・キーワードで検索", class: "form_horizon" %>
+          <%= f.text_field :title_or_text_cont, placeholder: "商品名・キーワードで検索", class: "form_horizon form_style" %>
         </div>
       </div>
-      <%= f.submit class: "form_horizon submit_button" %>
+      <%= f.submit class: "form_horizon button_style" %>
     <% end %>
   </div>
 </dd>
@@ -36,8 +36,6 @@
         <% end %>
       </ul>
     </section>
-    <%= link_to "サインアウト", destroy_user_session_path, method: :delete %>
-
     <!-- 
   <nav class="pagination">
         <span class="page current">
@@ -83,12 +81,12 @@
         <form class="new_user" id="new_user" action="/users/sign_in" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="✓"><input type="hidden" name="authenticity_token" value="z/uU4DckyQb5t0uAmiAf4VYaJM6VvfUoRvFkwt7d1NM6z8e+Lo5kK2Rn0JAeIVfhVJZRrD/pp85WdCfpCYgMHA==">
       <div class="field">
         <label for="user_メールアドレス">メールアドレス</label><br>
-        <input autofocus="autofocus" type="email" value="" name="user[email]" id="user_email">
+        <input autofocus="autofocus" type="email" value="" name="user[email]" id="user_email" class="form_size">
       </div>
 
       <div class="field">
         <label for="user_パスワード">パスワード</label><br>
-        <input autocomplete="off" type="password" name="user[password]" id="user_password">
+        <input autocomplete="off" type="password" name="user[password]" id="user_password" class="form_size">
       </div>
 
     <div class="field">
@@ -97,7 +95,7 @@
       <input name="user[remember_me]" type="hidden" value="0"><input type="checkbox" value="1" name="user[remember_me]" id="user_remember_me">
 
     <div class="actions">
-    <input type="submit" name="commit" value="ログイン">
+    <input type="submit" name="commit" value="ログイン" class="button_style">
     </div>
 </form>    </div>
 </section>

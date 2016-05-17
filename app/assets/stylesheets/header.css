@@ -280,8 +280,17 @@
   }
 }
 
-.headinner #global-nav .drawer-nav_style{
+.headinner #global-nav .drawer-nav-style{
   background-color: rgba(0, 0, 0, 0.6);
   height: inherit;
 }
 
+.drawer-nav{
+  margin-top: 66px;
+}
+
+.hambuger-style{
+  cursor: pointer;
+  background: white;
+  color: white;
+}
