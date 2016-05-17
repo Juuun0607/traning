@@ -6,14 +6,23 @@
 <h2 class="title"><dt>検索</dt></h2>
 <dd class="post">
   <div class="searchform">
-    <form class="train_search" id="train_search" action="/trains" accept-charset="UTF-8" method="get"><input name="utf8" type="hidden" value="✓">
+<!--     <form class="train_search" id="train_search" action="/trains" accept-charset="UTF-8" method="get"><input name="utf8" type="hidden" value="✓">
         <input placeholder="商品名・キーワードで検索" type="search" name="q[title_or_text_cont]" id="q_title_or_text_cont">
         <input type="submit" name="commit" value="Search">
-    </form> 
+    </form> -->
+    <%= search_form_for @q do |f| %>
+      <div class="control-group">
+        <div class="controls">
+          <%= f.text_field :title_or_text_cont, placeholder: "商品名・キーワードで検索", class: "form_horizon" %>
+        </div>
+      </div>
+      <%= f.submit class: "form_horizon" %>
+    <% end %>
   </div>
 </dd>
 </dl>
   </section>
+
 
   <div id="content">
     <section>
@@ -28,6 +37,7 @@
         <% end %>
       </ul>
     </section>
+    <%= link_to "サインアウト", destroy_user_session_path, method: :delete %>
 
     <!-- 
   <nav class="pagination">

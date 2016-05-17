@@ -1,8 +1,10 @@
 <body class="loginpage">
 <div class="contents">
-<h2>Signin</h2>
+<h2>Sign up</h2>
 
-<%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+<%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+  <%= devise_error_messages! %>
+
 
   <div class="field">
     <%= f.label :nickname, class: "inputlabel"%><br>
@@ -10,25 +12,27 @@
   </div>
 
   <div class="field">
-    <%= f.label :email, class: "inputlabel"%><br>
-    <%= f.email_field :email, autofocus: true , class: "inputarea", placeholder: "メールアドレス"%>
+    <%= f.label :email, class: "inputlabel" %><br />
+    <%= f.email_field :email, autofocus: "off", class: "inputarea", placeholder: "メールアドレス" %>
   </div>
 
   <div class="field">
-    <%= f.label :Password ,class: "inputlabel"%><br>
-    <%= f.password_field :password, autocomplete: "off", class: "inputarea" ,:placeholder => "パスワード"%>
+    <%= f.label :password, class: "inputlabel" %>
+    <% if @minimum_password_length %>
+    <em>(<%= @minimum_password_length %> characters minimum)</em>
+    <% end %><br />
+    <%= f.password_field :password, autocomplete: "off", class: "inputarea", placeholder: "パスワード" %>
   </div>
 
-  <% if devise_mapping.rememberable? -%>
-    <div class="boxfield">
-      <%= f.label :"パスワードを記憶する", class: "checkboxplace" %>
-    <%= f.check_box :remember_me, class: "checkbox" %>
-        </div>
-  <% end -%>
+  <div class="field">
+    <%= f.label :password_confirmation, class: "inputlabel" %><br />
+    <%= f.password_field :password_confirmation, autocomplete: "off", class: "inputarea", placeholder: "パスワード確認" %>
+  </div>
 
   <div class="actions">
-    <%= f.submit "Login", class: "button" %>
+    <%= f.submit "Sign up", class: "button" %>
   </div>
 <% end %>
+
 </div>
 </body>
