@@ -1,4 +1,4 @@
 Rails.application.routes.draw do
-  get 'trains' => 'trains#index'
+  root 'trains#index'
   get 'trains/:id' => 'trains#show'
 end
