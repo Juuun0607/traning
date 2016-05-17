@@ -4,4 +4,8 @@ class TrainsController < ApplicationController
     @trains = Train.all
   end
 
+  def show
+    
+  end
+
 end
