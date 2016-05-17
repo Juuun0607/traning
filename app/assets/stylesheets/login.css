@@ -1,0 +1,128 @@
+/* line 1, /Users/tech-camp/training/app/assets/stylesheets/LOGIN.scss */
+.loginpage {
+  background: url(back2.jpg) center center/cover no-repeat fixed;
+}
+
+/* line 9, /Users/tech-camp/training/app/assets/stylesheets/LOGIN.scss */
+.contents {
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.6);
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 100px;
+  margin-bottom: 0;
+  padding: 30px;
+  max-width: 660px;
+  border-radius: 10px;
+}
+
+/* line 22, /Users/tech-camp/training/app/assets/stylesheets/LOGIN.scss */
+.contents h2 {
+  color: black;
+  font-size: 2em;
+  font-family: 'CODE Bold';
+  text-decoration: underline;
+  letter-spacing: 0.3em;
+  color: black;
+  width: 50%;
+  margin: 0 auto;
+}
+
+/* line 33, /Users/tech-camp/training/app/assets/stylesheets/LOGIN.scss */
+.contents .field {
+  margin: 5% auto;
+}
+
+/* line 37, /Users/tech-camp/training/app/assets/stylesheets/LOGIN.scss */
+.contents .field .inputlabel {
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  font-size: 1.5em;
+  font-weight: bold;
+  color: #000;
+  margin-left: auto;
+  font-family: 'CODE bold';
+}
+
+/* line 47, /Users/tech-camp/training/app/assets/stylesheets/LOGIN.scss */
+.contents .field .inputarea {
+  background-color: rgba(0, 0, 0, 0.5);
+  -webkit-border-radius: .4em;
+  -moz-border-radius: .4em;
+  border-radius: .4em;
+  -moz-box-shadow: 0 -1px 0 0px #000;
+  -webkit-box-shadow: 0 -1px 0 0px #000;
+  box-shadow: 0 -1px 0 0px #000;
+  border: none;
+  width: 300px;
+  height: 40px;
+  margin: 0 auto;
+  color: #fff;
+  padding: 0 0 0 10px;
+  font-size: 1.2em;
+  letter-spacing: 2px;
+}
+
+/* line 65, /Users/tech-camp/training/app/assets/stylesheets/LOGIN.scss */
+.contents .field .inputarea:focus {
+  color: #ffffff;
+  background-color: rgba(0, 0, 0, 0.7);
+  font-family: 'CODE bold';
+}
+
+/* line 71, /Users/tech-camp/training/app/assets/stylesheets/LOGIN.scss */
+.contents .field .inputarea:invalid, textarea:invalid {
+  border-radius: 1px;
+  -moz-box-shadow: 0px 0px 5px red;
+  -webkit-box-shadow: 0px 0px 5px red;
+  box-shadow: 0px 0px 5px red;
+}
+
+/* line 78, /Users/tech-camp/training/app/assets/stylesheets/LOGIN.scss */
+.button {
+  margin-top: 20px;
+  padding: 15px 40px;
+  font-size: 1.2em;
+  background-color: rgba(255, 0, 0, 0.8);
+  color: #fff;
+  border-style: none;
+  border-radius: 5px;
+  letter-spacing: 2px;
+}
+
+/* line 92, /Users/tech-camp/training/app/assets/stylesheets/LOGIN.scss */
+.button:hover {
+  letter-spacing: 5px;
+  background-color: #fff;
+  border-color: #59b1eb;
+  color: red;
+}
+
+/* line 100, /Users/tech-camp/training/app/assets/stylesheets/LOGIN.scss */
+.button::before,
+.button::after {
+  position: absolute;
+  z-index: -1;
+  display: block;
+  content: '';
+}
+
+/* line 108, /Users/tech-camp/training/app/assets/stylesheets/LOGIN.scss */
+.button,
+.button::before,
+.button::after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-transition: all .3s;
+  transition: all .3s;
+}
+
+@media only screen and (max-width: 767px) {
+  /* line 118, /Users/tech-camp/training/app/assets/stylesheets/LOGIN.scss */
+  .loginpage {
+    background-image: url(back2.jpg);
+  }
+}
+
