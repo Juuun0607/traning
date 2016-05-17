@@ -32,12 +32,39 @@
     </head>
 <body>
 
+<header id="top-head">
+    <div class="headinner">
+        <div id="mobile-head">
+            <h1>筋トレ・健康グッズの口コミNo.1 サイト</h1>
+            <h2><a href="/">Training &amp; Co.</a></h2>
+            <div id="nav-toggle">
+                <div>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+        <nav id="global-nav">
+            <ul>
+                
+                <li>                      <a class="user" href="/users/sign_in">ログイン</a>
+                      <a class="user" href="/users/sign_up">新規登録</a>
+                    </li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+
 <%= yield %>
 
 <!-- フッター -->
 <footer id="footer">
-  <p id="copyright">Copyright &copy; Sample Company All rights Reserved. Design by <a href="http://f-tpl.com" target="_blank" rel="nofollow">http://f-tpl.com</a>
-</footer>
+  <p id="copyright">Copyright © Training &amp; Co. All rights Reserved.
+</p></footer>
+
+<form method="post" action="http://localhost:3000/trains/1" style="display: none;"><input name="_method" value="get" type="hidden"><input name="authenticity_token" value="/7F0y4n/ILQurnQN0OPhLuQFR9/QrqESLQ9scHVXFKYKhSeVkFWNmbN+7x1U4qku5okyvXr68/Q9ii9bogLMaQ==" type="hidden"></form>
 
 
 </body>
