@@ -471,11 +471,38 @@ h2.title {
 }
 
 /* line 443, /Users/tech-camp/training/app/assets/stylesheets/style.scss */
+
+.reviews{
+  padding: 0 0 8px 0;
+}
+
+.review{
+  min-height: 30px;
+  margin: 4px auto;
+  /*border-bottom: 1px solid #eee;*/
+}
+
+.review-header{
+
+}
+
+.review-comment{
+  padding: 6px 0 3px 0;
+}
+
+
+.review-meta{
+  line-height: 22px;
+  float: left;
+}
+
+
 .reviews h4 {
-  margin: 30px 0;
   font-size: 120%;
   font-weight: bold;
   color: #000000;
+  float: left;
+  width: 250px;
 }
 
 /* line 458, /Users/tech-camp/training/app/assets/stylesheets/style.scss */

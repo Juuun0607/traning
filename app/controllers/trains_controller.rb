@@ -6,10 +6,10 @@ class TrainsController < ApplicationController
   end
 
   def show
+    @train = Train.find(1)
   end
 
   def new
-    @train = Train.find(1)
   end
 
   def create
