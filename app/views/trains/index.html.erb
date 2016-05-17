@@ -9,11 +9,11 @@
     <form class="train_search" id="train_search" action="/trains" accept-charset="UTF-8" method="get"><input name="utf8" type="hidden" value="✓">
         <input placeholder="商品名・キーワードで検索" type="search" name="q[title_or_text_cont]" id="q_title_or_text_cont">
         <input type="submit" name="commit" value="Search">
-</form>  </div>
+    </form> 
+  </div>
 </dd>
 </dl>
   </section>
-<!-- 検索ボタンおわり -->
 
   <div id="content">
     <section>
@@ -28,6 +28,8 @@
         <% end %>
       </ul>
     </section>
+
+    <!-- 
   <nav class="pagination">
         <span class="page current">
   1
@@ -46,6 +48,11 @@
 </span>
 
   </nav>
+ -->
+
+ <nav class="pagenation">
+  <%= paginate @trains %>
+ </nav>
 
   </div>
 <!-- / content -->

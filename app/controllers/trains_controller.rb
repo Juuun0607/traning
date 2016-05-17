@@ -1,7 +1,7 @@
 class TrainsController < ApplicationController
 
   def index
-    @trains = Train.all
+    @trains = Train.all.page(params[:page]).per(1)
   end
 
   def show
