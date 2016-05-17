@@ -7,7 +7,7 @@ class ApplicationController < ActionController::Base
   layout :layout_by_resource
 
   def configure_permitted_parameters
-    devise_parameter_sanitizer.for(:sign_up).push(:username)
+    devise_parameter_sanitizer.for(:sign_up).push(:nickname)
   end
 
   def layout_by_resource
