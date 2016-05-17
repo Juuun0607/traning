@@ -6,7 +6,7 @@ class TrainsController < ApplicationController
   end
 
   def show
-    @train = Train.includes(:reviews).find(1)
+    @train = Train.joins(reviews: :user).find(params[:id])
     @reviews = @train.reviews
     @review = Review.new
   end

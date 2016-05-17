@@ -43,9 +43,9 @@
                   <div class="review-meta">
                     <span class="review-point">
                       評価
-                      <span>★★★☆☆(3点)</span>
+                      <span>★★★☆☆(<%= review.rate %>点)</span>
                     </span>
-                    <span class="review-user">阿部幸一郎</span>
+                    <span class="review-user"><%= review.user.nickname %></span>
                   </div>
                 </div>
                 <div class="review-comment">
@@ -57,8 +57,6 @@
           <% if user_signed_in? %>
           <%= render :partial => "reviews/form" %>
           <% else %>
-
-          <%= render :partial => "reviews/form" %>
            <%= link_to ">> 新規登録してレビューを書く", new_user_registration_path, class: 'regi' %>
            <%= link_to ">> ログインしてレビューを書く", new_user_session_path, class: 'log' %>
           <% end %>
