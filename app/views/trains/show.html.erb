@@ -36,55 +36,29 @@
           </div>
           <h3>商品レビュー</h3>
           <div class="reviews">
-            <div class="review">
-              <div class="review-header clearfix">
-                <h4>ここにタイトルを入れる</h4>
-                <div class="review-meta">
-                  <span class="review-point">
-                    評価
-                    <span>★★★☆☆(3点)</span>
-                  </span>
-                  <span class="review-user">阿部幸一郎</span>
+            <% @reviews.each do |review| %>
+              <div class="review">
+                <div class="review-header clearfix">
+                  <h4><%= review.title %></h4>
+                  <div class="review-meta">
+                    <span class="review-point">
+                      評価
+                      <span>★★★☆☆(3点)</span>
+                    </span>
+                    <span class="review-user">阿部幸一郎</span>
+                  </div>
+                </div>
+                <div class="review-comment">
+                  <%= simple_format(review.review, :class => "itemtext") %>
                 </div>
               </div>
-              <div class="review-comment">
-                ここにコメントここにコメントここにコメントここにコメントここにコメントここにコメントここにコメントここにコメントここにコメントここにコメントここにコメントここにコメントここにコメント
-              </div>
-            </div>
-            <div class="review">
-              <div class="review-header clearfix">
-                <h4>ここにタイトルを入れる</h4>
-                <div class="review-meta">
-                  <span class="review-point">
-                    評価
-                    <span>★★★☆☆(3点)</span>
-                  </span>
-                  <span class="review-user">阿部幸一郎</span>
-                </div>
-              </div>
-              <div class="review-comment">
-                ここにコメントここにコメントここにコメントここにコメントここにコメントここにコメントここにコメントここにコメントここにコメントここにコメントここにコメントここにコメントここにコメント
-              </div>
-            </div>
-            <div class="review">
-              <div class="review-header clearfix">
-                <h4>ここにタイトルを入れる</h4>
-                <div class="review-meta">
-                  <span class="review-point">
-                    評価
-                    <span>★★★☆☆(3点)</span>
-                  </span>
-                  <span class="review-user">阿部幸一郎</span>
-                </div>
-              </div>
-              <div class="review-comment">
-                ここにコメントここにコメントここにコメントここにコメントここにコメントここにコメントここにコメントここにコメントここにコメントここにコメントここにコメントここにコメントここにコメント
-              </div>
-            </div>
+            <% end %>
           </div>
           <% if user_signed_in? %>
           <%= render :partial => "reviews/form" %>
           <% else %>
+
+          <%= render :partial => "reviews/form" %>
            <%= link_to ">> 新規登録してレビューを書く", new_user_registration_path, class: 'regi' %>
            <%= link_to ">> ログインしてレビューを書く", new_user_session_path, class: 'log' %>
           <% end %>

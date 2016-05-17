@@ -505,6 +505,10 @@ h2.title {
   width: 250px;
 }
 
+.new_review{
+  margin: 0 0 6px 0;
+}
+
 /* line 458, /Users/tech-camp/training/app/assets/stylesheets/style.scss */
 .regi {
   padding: 1% 2% 1%;
@@ -531,6 +535,10 @@ h2.title {
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
   -webkit-transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
   transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+}
+
+.submit-button{
+  margin: 10px 0;
 }
 
 /* line 484, /Users/tech-camp/training/app/assets/stylesheets/style.scss */
