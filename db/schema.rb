@@ -11,14 +11,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160427021125) do
+ActiveRecord::Schema.define(version: 20160517032138) do
 
   create_table "trains", force: :cascade do |t|
-    t.string   "name",       limit: 255
+    t.string   "title",      limit: 255
     t.text     "text",       limit: 65535
     t.text     "image",      limit: 65535
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.text     "link1",      limit: 65535
+    t.text     "link2",      limit: 65535
+    t.text     "link3",      limit: 65535
   end
 
 end
