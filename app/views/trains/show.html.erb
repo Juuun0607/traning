@@ -3,15 +3,15 @@
     <section>
       <article class="content">
         <div class="post">
-  <div class="content_post">
-    <h2 class="itemtitle"><%= link_to (@train.title) , "/trains/#{@train.id}", method: :get %></h2>
-    <%= image_tag (@train.image),:width => '50%',:class => "itemimage" %>
-    <div class="point">
-      <p>レビュー平均点数</p>
-      <p>★★★☆☆(3点)</p>
-    </div><br><br><br><br>
-    <%= simple_format(@train.text, :class => "itemtext")%>
-  </div>
+          <div class="content_post">
+            <h2 class="itemtitle"><%= link_to (@train.title) , "/trains/#{@train.id}", method: :get %></h2>
+            <%= image_tag (@train.image),:width => '50%',:class => "itemimage" %>
+            <div class="point">
+              <p>レビュー平均点数</p>
+              <p>★★★☆☆(3点)</p>
+            </div><br><br><br><br>
+            <%= simple_format(@train.text, :class => "itemtext")%>
+          </div>
           <table class="statsDay">
             <tbody>
               <tr>
@@ -29,36 +29,20 @@
             </tbody>
           </table>
           <div class="item_links">
-          <%= link_to "公式サイトへ" ,(@train.link1) , method: :get ,class: 'itemlink1'%>
-          <a href="" class="itemlink2">Amazon.com<a>
-          <a href="" class="itemlink3">ポンパレモール<a>
-          <a href="" class="itemlink4">楽  天<a>
+            <%= link_to "公式サイトへ" ,(@train.link1) , method: :get ,class: 'itemlink1'%>
+            <a href="" class="itemlink2">Amazon.com<a>
+            <a href="" class="itemlink3">ポンパレモール<a>
+            <a href="" class="itemlink4">楽  天<a>
           </div>
           <h3>商品レビュー</h3>
           <div class="reviews">
-            <% @reviews.each do |review| %>
-              <div class="review">
-                <div class="review-header clearfix">
-                  <h4><%= review.title %></h4>
-                  <div class="review-meta">
-                    <span class="review-point">
-                      評価
-                      <span>★★★☆☆(<%= review.rate %>点)</span>
-                    </span>
-                    <span class="review-user"><%= review.user.nickname %></span>
-                  </div>
-                </div>
-                <div class="review-comment">
-                  <%= simple_format(review.review, :class => "itemtext") %>
-                </div>
-              </div>
-            <% end %>
+            <%= render @reviews %>
           </div>
           <% if user_signed_in? %>
-          <%= render :partial => "reviews/form" %>
+            <%= render :partial => "reviews/form" %>
           <% else %>
-           <%= link_to ">> 新規登録してレビューを書く", new_user_registration_path, class: 'regi' %>
-           <%= link_to ">> ログインしてレビューを書く", new_user_session_path, class: 'log' %>
+            <%= link_to ">> 新規登録してレビューを書く", new_user_registration_path, class: 'regi' %>
+            <%= link_to ">> ログインしてレビューを書く", new_user_session_path, class: 'log' %>
           <% end %>
         </div>
       </article>

@@ -26,14 +26,10 @@ class ReviewsController < ApplicationController
   def create
     @review = Review.new(review_params)
     train = @review.train
-    respond_to do |format|
-      if @review.save
-        format.html { redirect_to train, notice: 'Review was successfully created.' }
-        format.json { render :show, status: :created, location: @review }
-      else
-        format.html { render :new }
-        format.json { render json: @review.errors, status: :unprocessable_entity }
-      end
+    if @review.save
+      @reviews = train.reviews
+    else
+      redirect_to :back
     end
   end
 
