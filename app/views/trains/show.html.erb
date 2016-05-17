@@ -39,7 +39,7 @@
             <%= render @reviews %>
           </div>
           <% if user_signed_in? %>
-            <%= render :partial => "reviews/form" %>
+              <%= render :partial => "reviews/form" %>
           <% else %>
             <%= link_to ">> 新規登録してレビューを書く", new_user_registration_path, class: 'regi' %>
             <%= link_to ">> ログインしてレビューを書く", new_user_session_path, class: 'log' %>
