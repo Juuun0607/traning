@@ -1,6 +1,6 @@
 /* line 1, /Users/tech-camp/training/app/assets/stylesheets/LOGIN.scss */
 .loginpage {
-  background: url(back2.jpg) center center/cover no-repeat fixed;
+  background: url('back2.jpg') center center/cover no-repeat fixed;
 }
 
 /* line 9, /Users/tech-camp/training/app/assets/stylesheets/LOGIN.scss */
