@@ -12,7 +12,9 @@
     <% end %><br><br>
     <p>　Ex.「腹筋」「背筋」「おっぱい」</p>
   </div>
-
+<% @items.Body.ItemSearch.Items.Item.each do |item| %>
+  <%= item.itemName  %><br>
+<% end %>
   <div id="content">
     <section>
       <h2 class="title"><span>2016年！最新トレーニンググッズランキング</span></h2>
@@ -64,7 +66,8 @@
 <img border="0" width="1" height="1" src="http://www12.a8.net/0.gif?a8mat=2NKAZE+76ZOSA+3D3Q+61C2P" alt="">
 
 <!-- スポンサードリンクおわり -->
-
+<% if user_signed_in? %>
+<% else %>
 <section class="Login">
     <h3><span>ログイン</span></h3>
       <div class="submit">
@@ -89,21 +92,9 @@
     </div>
 </form>    </div>
 </section>
-
+<% end %>
       <section class="widget">
-      <h3><span>カテゴリ</span></h3>
-      <ul>
-        <li><a href="trains/item">トレーニンググッズ</a></li>
-        <li><a href="trains/item">サプリメント</a></li>
-        <li><a href="trains/item">ダイエット食品</a></li>
-        <li><a href="trains/item">がちむちアイテム</a></li>
-        <li><a href="trains/item">ウェア</a></li>
-        <li><a href="trains/item">あっはっは〜</a></li>
-      </ul>
-    </section>
-
-      <section class="widget">
-      <h3><span>ランキング</span></h3>
+      <h3><span>月間レビュー数ランキング</span></h3>
       <div class="ranking">
         <% @ranking.each.with_index(1) do |train, i| %>
             <a href="/trains/<%= train.id %>">

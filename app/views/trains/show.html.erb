@@ -43,36 +43,71 @@
               <%= render :partial => "reviews/form" %>
           <% else %>
             <%= link_to ">> 新規登録してレビューを書く", new_user_registration_path, class: 'regi' %>
+            <br><br>
             <%= link_to ">> ログインしてレビューを書く", new_user_session_path, class: 'log' %>
           <% end %>
         </div>
       </article>
     </section>
   </div>
-  <aside id="sidebar2">
-    <section class="widgetInfo">
-      <div class="newsTitle">
-        <h3 class="title"><span>カテゴリ別人気ランキング</span></h3>
-        <p><a href="trains/item">一覧</a>
+<!-- sidebar -->
+<aside id="sidebar2">
+
+<!-- スポンサードリンク -->
+
+<a href="http://px.a8.net/svt/ejp?a8mat=2NKAZE+76ZOSA+3D3Q+61C2P" target="_blank">
+<img border="0" width="300" height="120" alt="" src="http://www26.a8.net/svt/bgt?aid=160510874435&amp;wid=006&amp;eno=01&amp;mid=s00000015695001014000&amp;mc=1"></a>
+<img border="0" width="1" height="1" src="http://www12.a8.net/0.gif?a8mat=2NKAZE+76ZOSA+3D3Q+61C2P" alt="">
+
+<!-- スポンサードリンクおわり -->
+<% if user_signed_in? %>
+<% else %>
+<section class="Login">
+    <h3><span>ログイン</span></h3>
+      <div class="submit">
+        <form class="new_user" id="new_user" action="/users/sign_in" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="✓"><input type="hidden" name="authenticity_token" value="z/uU4DckyQb5t0uAmiAf4VYaJM6VvfUoRvFkwt7d1NM6z8e+Lo5kK2Rn0JAeIVfhVJZRrD/pp85WdCfpCYgMHA==">
+      <div class="field">
+        <label for="user_メールアドレス">メールアドレス</label><br>
+        <input autofocus="autofocus" type="email" value="" name="user[email]" id="user_email" class="form_size">
       </div>
-      <div class="post news">
-        <p><a href="trains/item"><time>2012/11/30</time><span>環境への取り組み</span></a>
-        <p><a href="trains/item"><time>2012/11/15</time><span>新サービスを開始</span></a>
-        <p><a href="trains/item"><time>2012/11/02</time><span>リニューアル</span></a>
-        <p><a href="trains/item"><time>2012/10/30</time><span>環境への取り組み</span></a>
-        <p><a href="trains/item"><time>2012/09/13</time><span>新講座を開講しました</span></a>
+
+      <div class="field">
+        <label for="user_パスワード">パスワード</label><br>
+        <input autocomplete="off" type="password" name="user[password]" id="user_password" class="form_size">
       </div>
-    </section>
-    <section class="widget">
-      <h3><span>カテゴリ</span></h3>
-      <ul>
-        <li><a href="trains/item">トレーニンググッズ</a></li>
-        <li><a href="trains/item">サプリメント</a></li>
-        <li><a href="trains/item">ダイエット食品</a></li>
-        <li><a href="trains/item">がちむちアイテム</a></li>
-        <li><a href="trains/item">ウェア</a></li>
-        <li><a href="trains/item">あっはっは〜</a></li>
-      </ul>
+
+    <div class="field">
+      <label for="user_パスワードを記憶する">パスワードを記憶する</label>
+    </div>
+      <input name="user[remember_me]" type="hidden" value="0"><input type="checkbox" value="1" name="user[remember_me]" id="user_remember_me">
+
+    <div class="actions">
+    <input type="submit" name="commit" value="ログイン" class="button_style">
+    </div>
+</form>    </div>
+</section>
+<% end %>
+      <section class="widget">
+      <h3><span>月間レビュー数ランキング</span></h3>
+      <div class="ranking">
+        <% @ranking.each.with_index(1) do |train, i| %>
+            <a href="/trains/<%= train.id %>">
+              <div class="box">
+                <div class="box__cell w40 align-center">
+                  <p class="label bgcolor-gray-lighter align-center">
+                  <p class="rank"><%= i %></p>
+                  </p>
+                </div>
+                <div class="box__cell pl1em">
+                  <p class="ranktitle">
+                    <%= train.title %>
+                  </p>
+                  <img src="<%= train.image %>" alt="" class="rankImage">
+                </div>
+              </div>
+            </a>
+        <% end %>
+      </div>
     </section>
   </aside>
 </div>

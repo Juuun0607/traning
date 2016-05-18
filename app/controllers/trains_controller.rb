@@ -3,6 +3,7 @@ class TrainsController < RankingController
   def index
     @q = Train.search(params[:q])
     @trains = @q.result(distinct: true).page(params[:page]).per(5)
+    @items = Rakuten.item_search("Rails")
   end
 
   def show
