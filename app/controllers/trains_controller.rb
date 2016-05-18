@@ -28,13 +28,9 @@ class TrainsController < RankingController
 
   def destroy
   end
-<<<<<<< HEAD
 
   private
   def trains_params
     params.require(:train).permit(:title, :text, :image, :link1, :link2, :link3)
   end
 end
-=======
-end
->>>>>>> a7d675eca6bb201901d3992cddd667db74fc7f19
