@@ -1,6 +1,6 @@
 /* line 1, /Users/tech-camp/training/app/assets/stylesheets/LOGIN.scss */
 .loginpage {
-  background: url(back2.jpg) center center/cover no-repeat fixed;
+  background: url('back.jpg') center center/cover no-repeat fixed;
 }
 
 /* line 9, /Users/tech-camp/training/app/assets/stylesheets/LOGIN.scss */
@@ -11,7 +11,7 @@
   margin-left: auto;
   margin-right: auto;
   margin-top: 100px;
-  margin-bottom: 0;
+  margin-bottom: 100px;
   padding: 30px;
   max-width: 660px;
   border-radius: 10px;
@@ -121,8 +121,4 @@
 
 @media only screen and (max-width: 767px) {
   /* line 118, /Users/tech-camp/training/app/assets/stylesheets/LOGIN.scss */
-  .loginpage {
-    background-image: url(back2.jpg);
-  }
-}
 

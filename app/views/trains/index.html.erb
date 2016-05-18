@@ -1,14 +1,6 @@
 <div id="wrapper">
   <!-- 検索ボタン -->
-<section class="search">
-<dl>
-<h2 class="title"><dt>検索</dt></h2>
-<dd class="post">
   <div class="searchform">
-<!--     <form class="train_search" id="train_search" action="/trains" accept-charset="UTF-8" method="get"><input name="utf8" type="hidden" value="✓">
-        <input placeholder="商品名・キーワードで検索" type="search" name="q[title_or_text_cont]" id="q_title_or_text_cont">
-        <input type="submit" name="commit" value="Search">
-    </form> -->
     <%= search_form_for @q do |f| %>
       <div class="control-group">
         <div class="controls">
@@ -18,19 +10,16 @@
       <%= f.submit class: "form_horizon button_style" %>
     <% end %>
   </div>
-</dd>
-</dl>
-  </section>
-
   <div id="content">
     <section>
-      <h2 class="title"><span>2016年！最新トレーニンググッズ</span></h2>
+      <h2 class="title"><span>2016年！最新トレーニンググッズランキング ( 新着順 )</span></h2>
       <ul class="post">
         <% @trains.each do |train| %>
           <li>
-            <img width="30%" class="itemimage" src="<%= train.image %>" alt="Abhg pf3">
-            <h3><a data-method="get" href="trains/<%= train.id %>"><%= train.title %></a></h3>
-            <p></p><p class="itemtext"><%= train.text %></p><p></p>
+          <h3><a data-method="get" href="trains/<%= train.id %>"><%= train.title %></a></h3>
+          <div class="itemimage0">
+            <a><img width="30%" class="itemimage" src="<%= train.image %>" alt="Abhg pf3" href="trains/<%= train.id %>"></a></div>
+            <p class="itemtext"><%= train.text %></p>
           </li>
         <% end %>
       </ul>
@@ -72,7 +61,8 @@
 <img border="0" width="1" height="1" src="http://www12.a8.net/0.gif?a8mat=2NKAZE+76ZOSA+3D3Q+61C2P" alt="">
 
 <!-- スポンサードリンクおわり -->
-
+<% if user_signed_in? %>
+<% else %>
 <section class="Login">
     <h3><span>ログイン</span></h3>
       <div class="submit">
@@ -97,31 +87,28 @@
     </div>
 </form>    </div>
 </section>
-
+<% end %>
       <section class="widget">
-      <h3><span>カテゴリ</span></h3>
-      <ul>
-        <li><a href="trains/item">トレーニンググッズ</a></li>
-        <li><a href="trains/item">サプリメント</a></li>
-        <li><a href="trains/item">ダイエット食品</a></li>
-        <li><a href="trains/item">がちむちアイテム</a></li>
-        <li><a href="trains/item">ウェア</a></li>
-        <li><a href="trains/item">あっはっは〜</a></li>
-      </ul>
-    </section>
-
-    <section class="widgetInfo">
-      <div class="newsTitle">
-        <h3 class="title"><span>カテゴリ別人気ランキング</span></h3>
-        <p><a href="trains/item">一覧</a>
-      </p></div>
-      <div class="post news">
-        <p><a href="trains/item"><time>2012/11/30</time><span>環境への取り組み</span></a>
-        </p><p><a href="trains/item"><time>2012/11/15</time><span>新サービスを開始</span></a>
-        </p><p><a href="trains/item"><time>2012/11/02</time><span>リニューアル</span></a>
-        </p><p><a href="trains/item"><time>2012/10/30</time><span>環境への取り組み</span></a>
-        </p><p><a href="trains/item"><time>2012/09/13</time><span>新講座を開講しました</span></a>
-      </p></div>
+      <h3><span>レビュー数ランキング</span></h3>
+      <div class="ranking">
+        <% @ranking.each.with_index(1) do |train, i| %>
+            <a href="/trains/<%= train.id %>">
+              <div class="box">
+                <div class="box__cell w40 align-center">
+                  <p class="label bgcolor-gray-lighter align-center">
+                  <p class="rank"><%= i %></p>
+                  </p>
+                </div>
+                <div class="box__cell pl1em">
+                  <p class="ranktitle">
+                    <%= train.title %>
+                  </p>
+                  <img src="<%= train.image %>" alt="" class="rankImage">
+                </div>
+              </div>
+            </a>
+        <% end %>
+      </div>
     </section>
   </aside>
 </div>
