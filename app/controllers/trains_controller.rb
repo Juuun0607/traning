@@ -2,7 +2,7 @@ class TrainsController < ApplicationController
 
   def index
     @q = Train.search(params[:q])
-    @trains = @q.result(distinct: true).page(params[:page]).per(1)
+    @trains = @q.result(distinct: true).page(params[:page]).per(5)
   end
 
   def show

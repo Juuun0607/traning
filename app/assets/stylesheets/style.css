@@ -375,8 +375,8 @@ h2.title {
 }
 
 /* line 349, /Users/tech-camp/training/app/assets/stylesheets/style.scss */
-.post img {
-  max-width: 100%;
+.post .itemimage {
+  width: 50%;
   height: auto;
   padding: 1px;
   border: thin solid #d3d3d3;
