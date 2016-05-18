@@ -19,7 +19,7 @@
       <ul class="post">
         <% @trains.each do |train| %>
           <li>
-            <img width="30%" class="itemimage" src="<%= train.image %>" alt="Abhg pf3">
+          <a><img width="30%" class="itemimage" src="<%= train.image %>" alt="Abhg pf3" href="trains/<%= train.id %>"></a>
             <h3><a data-method="get" href="trains/<%= train.id %>"><%= train.title %></a></h3>
             <p></p><p class="itemtext"><%= train.text %></p><p></p>
           </li>
@@ -115,6 +115,25 @@
         </p><p><a href="trains/item"><time>2012/09/13</time><span>新講座を開講しました</span></a>
       </p></div>
     </section>
+    <% @ranking.each.with_index(1) do |train, i| %>
+          <li data-cinema-id="346394">
+            <a href="/trains/<%= train.id %>">
+              <div class="box">
+                <div class="box__cell w40 align-center">
+                  <p class="label bgcolor-gray-lighter align-center">
+                    <%= i %>
+                  </p>
+                </div>
+                <div class="box__cell pl1em">
+                  <p class="text-xsmall no-space">
+                    <%= train.title %>
+                  </p>
+                  <img src="<%= train.image_url %>" alt="">
+                </div>
+              </div>
+            </a>
+          </li>
+          <% end %>
   </aside>
 </div>
 <!-- / wrapper -->
