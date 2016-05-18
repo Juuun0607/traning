@@ -11,12 +11,25 @@
   border-radius: 3px;
   border-color: white;
   border: solid 1px #dddddd;
+  width: 50%;
+  height: 30px;
+  padding-left: 10px;
 }
 
 .button_style{
   border-radius: 3px;
   background-color: white;
-  border: solid 1px #dddddd;
+  border: solid 1px gray;
+  height: 30px;
+  color: white;
+  background-color: gray;
+  letter-spacing: 2px;
+  padding: 0 8px 0;
+}
+
+
+.button_style:hover{
+  opacity: 0.7;
 }
 
 .form_size{

@@ -140,6 +140,7 @@ nav .panel, nav#mainNav, .newsTitle, .bg, .post, ul.post li, nav#mainNav .inner 
   float: left;
   width: 627px;
   padding: 0 0 50px;
+  margin-top:20px;
 }
 
 /* line 111, /Users/tech-camp/training/app/assets/stylesheets/style.scss */
@@ -147,6 +148,7 @@ nav .panel, nav#mainNav, .newsTitle, .bg, .post, ul.post li, nav#mainNav .inner 
   float: right;
   width: 233px;
   padding: 0 0 50px;
+  margin-top:20px;
 }
 
 /* line 117, /Users/tech-camp/training/app/assets/stylesheets/style.scss */
@@ -176,6 +178,14 @@ nav .panel, nav#mainNav, .newsTitle, .bg, .post, ul.post li, nav#mainNav .inner 
 .search {
   width: 100%;
   margin: 80px auto 0px;
+}
+
+.searchform{
+  width: 100%;
+  margin: 80px auto 0px;
+}
+
+.train_search{
 }
 
 /* ヘッダー

@@ -1,15 +1,7 @@
 
 <div id="wrapper">
   <!-- 検索ボタン -->
-<section class="search">
-<dl>
-<h2 class="title"><dt>検索</dt></h2>
-<dd class="post">
   <div class="searchform">
-<!--     <form class="train_search" id="train_search" action="/trains" accept-charset="UTF-8" method="get"><input name="utf8" type="hidden" value="✓">
-        <input placeholder="商品名・キーワードで検索" type="search" name="q[title_or_text_cont]" id="q_title_or_text_cont">
-        <input type="submit" name="commit" value="Search">
-    </form> -->
     <%= search_form_for @q do |f| %>
       <div class="control-group">
         <div class="controls">
@@ -17,15 +9,13 @@
         </div>
       </div>
       <%= f.submit class: "form_horizon button_style" %>
-    <% end %>
+    <% end %><br><br>
+    <p>　Ex.「腹筋」「背筋」「おっぱい」</p>
   </div>
-</dd>
-</dl>
-  </section>
 
   <div id="content">
     <section>
-      <h2 class="title"><span>2016年！最新トレーニンググッズ</span></h2>
+      <h2 class="title"><span>2016年！最新トレーニンググッズランキング</span></h2>
       <ul class="post">
         <% @trains.each do |train| %>
           <li>
