@@ -102,38 +102,28 @@
       </ul>
     </section>
 
-    <section class="widgetInfo">
-      <div class="newsTitle">
-        <h3 class="title"><span>カテゴリ別人気ランキング</span></h3>
-        <p><a href="trains/item">一覧</a>
-      </p></div>
-      <div class="post news">
-        <p><a href="trains/item"><time>2012/11/30</time><span>環境への取り組み</span></a>
-        </p><p><a href="trains/item"><time>2012/11/15</time><span>新サービスを開始</span></a>
-        </p><p><a href="trains/item"><time>2012/11/02</time><span>リニューアル</span></a>
-        </p><p><a href="trains/item"><time>2012/10/30</time><span>環境への取り組み</span></a>
-        </p><p><a href="trains/item"><time>2012/09/13</time><span>新講座を開講しました</span></a>
-      </p></div>
-    </section>
-    <% @ranking.each.with_index(1) do |train, i| %>
-          <li data-cinema-id="346394">
+      <section class="widget">
+      <h3><span>ランキング</span></h3>
+      <div class="ranking">
+        <% @ranking.each.with_index(1) do |train, i| %>
             <a href="/trains/<%= train.id %>">
               <div class="box">
                 <div class="box__cell w40 align-center">
                   <p class="label bgcolor-gray-lighter align-center">
-                    <%= i %>
+                  <p class="rank"><%= i %></p>
                   </p>
                 </div>
                 <div class="box__cell pl1em">
-                  <p class="text-xsmall no-space">
+                  <p class="ranktitle">
                     <%= train.title %>
                   </p>
-                  <img src="<%= train.image_url %>" alt="">
+                  <img src="<%= train.image %>" alt="" class="rankImage">
                 </div>
               </div>
             </a>
-          </li>
-          <% end %>
+        <% end %>
+      </div>
+    </section>
   </aside>
 </div>
 <!-- / wrapper -->

@@ -1,4 +1,4 @@
-class TrainsController < ApplicationController
+class TrainsController < RankingController
 
   def index
     @q = Train.search(params[:q])

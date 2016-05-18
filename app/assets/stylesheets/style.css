@@ -613,6 +613,46 @@ section.widget ul, .widget_search, #calendar_wrap, .textwidget, .submit {
   text-align: center;
 }
 
+.ranking{
+  margin: 0 0 20px 0;
+  padding: 10px 10px 10px 17px;
+  border: 1px solid #d5d5d5;
+  background: #fff;
+  border-radius: 0 0 10px 10px;
+}
+
+.ranking .rank{
+  width:25px;
+  height:25px;
+  font-size:15px;
+  font-weight:bold;
+  background-color:gray;
+  border-radius:15px;
+  border:1px solid gray;
+  padding:1px;
+  display:inline-block;
+  text-align:center;
+  vertical-align:middle;
+  color:white;
+  margin-top:5px;
+}
+
+.ranktitle{
+  font-size:20px;
+  font-weight:bold;
+}
+
+.ranking .box{
+  border-bottom:thin gray dotted;
+}
+
+.rankImage{
+  width:60%;
+  padding:2px;
+  border: thin solid gray;
+  margin-bottom:10px;
+}
+
 /* line 523, /Users/tech-camp/training/app/assets/stylesheets/style.scss */
 section.widget ul ul {
   border: 0;
