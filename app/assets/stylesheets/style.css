@@ -517,6 +517,13 @@ h2.title {
   border-radius: 3px;
 }
 
+.log {
+  padding: 1% 2% 1%;
+  background-color: #ffb6c1;
+  color: white;
+  border-radius: 3px;
+}
+
 /* line 465, /Users/tech-camp/training/app/assets/stylesheets/style.scss */
 .field .comment {
   display: block;
