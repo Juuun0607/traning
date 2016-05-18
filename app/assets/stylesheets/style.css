@@ -13,6 +13,7 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
   outline: 0;
   padding: 0;
   vertical-align: baseline;
+  font-family:Avenir , "Open Sans" , "Helvetica Neue" , Helvetica , Arial , Verdana , Roboto , "游ゴシック" , "Yu Gothic" , "游ゴシック体" , "YuGothic" , "ヒラギノ角ゴ Pro W3" , "Hiragino Kaku Gothic Pro" , "Meiryo UI" , "メイリオ" , Meiryo , "ＭＳ Ｐゴシック" , "MS PGothic" , sans-serif;
 }
 
 /* line 7, /Users/tech-camp/training/app/assets/stylesheets/style.scss */
@@ -59,7 +60,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 
 /* line 17, /Users/tech-camp/training/app/assets/stylesheets/style.scss */
 body {
-  font: 12px/1.5 "メイリオ","Meiryo",arial,"ヒラギノ角ゴ Pro W3","Hiragino Kaku Gothic Pro",Osaka,"ＭＳ Ｐゴシック","MS PGothic",Sans-Serif;
+  font: 12px/1.5 ;
   color: #333;
   -webkit-text-size-adjust: none;
   background: #f5f5f5;
@@ -263,8 +264,9 @@ h2.title {
 }
 
 /* line 254, /Users/tech-camp/training/app/assets/stylesheets/style.scss */
-.post p {
-  padding-bottom: 15px;
+
+.post .itemimage {
+  float:left;
 }
 
 /* line 258, /Users/tech-camp/training/app/assets/stylesheets/style.scss */
@@ -305,6 +307,8 @@ h2.title {
   font-weight: bold;
   color: #000000;
   border-bottom: 1px solid #515151;
+  border-left:10px solid;
+  padding-left:10px;
 }
 
 /* line 286, /Users/tech-camp/training/app/assets/stylesheets/style.scss */
@@ -892,6 +896,8 @@ ul.post h3 {
   color: #333;
   border-bottom: thin dotted;
   overflow: hidden;
+  border-left:5px solid;
+  padding-left:10px;
 }
 
 /* メニュー
@@ -981,7 +987,9 @@ ul.post h3 {
   #footer li {
     margin-bottom: 10px;
   }
+
 }
+
 /* 幅644px以下から ヘッダー等微調節
 ------------------------------------------------------------*/
 @media only screen and (max-width: 644px) {
@@ -1021,4 +1029,36 @@ ul.post h3 {
   .alignright, .alignleft {
     float: none;
   }
+
+  .rankImage{
+  width:40%;
+  padding:2px;
+  border: thin solid gray;
+  margin-bottom:10px;
+}
+
+.post .itemimage {
+  height: auto;
+  padding: 1px;
+  border: thin solid #d3d3d3;
+  display: block;
+  margin-left: 25%;
+}
+
+.post .itemimage0{
+  text-align:center;
+}
+
+ul.post h3{
+  font-size: 150%;
+  font-weight: bold;
+  color: #000000;
+  border-bottom: 1px solid #515151;
+}
+
+.post p{
+  font-size:80%;
+  float:left;
+}
+
 }

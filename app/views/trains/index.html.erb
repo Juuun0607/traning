@@ -12,18 +12,16 @@
     <% end %><br><br>
     <p>　Ex.「腹筋」「背筋」「おっぱい」</p>
   </div>
-<% @items.Body.ItemSearch.Items.Item.each do |item| %>
-  <%= item.itemName  %><br>
-<% end %>
   <div id="content">
     <section>
       <h2 class="title"><span>2016年！最新トレーニンググッズランキング</span></h2>
       <ul class="post">
         <% @trains.each do |train| %>
           <li>
-          <a><img width="30%" class="itemimage" src="<%= train.image %>" alt="Abhg pf3" href="trains/<%= train.id %>"></a>
-            <h3><a data-method="get" href="trains/<%= train.id %>"><%= train.title %></a></h3>
-            <p></p><p class="itemtext"><%= train.text %></p><p></p>
+          <h3><a data-method="get" href="trains/<%= train.id %>"><%= train.title %></a></h3>
+          <div class="itemimage0">
+            <a><img width="30%" class="itemimage" src="<%= train.image %>" alt="Abhg pf3" href="trains/<%= train.id %>"></a></div>
+            <p class="itemtext"><%= train.text %></p>
           </li>
         <% end %>
       </ul>
