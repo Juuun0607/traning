@@ -9,12 +9,11 @@
         </div>
       </div>
       <%= f.submit class: "form_horizon button_style" %>
-    <% end %><br><br>
-    <p>　Ex.「腹筋」「背筋」「おっぱい」</p>
+    <% end %>
   </div>
   <div id="content">
     <section>
-      <h2 class="title"><span>2016年！最新トレーニンググッズランキング</span></h2>
+      <h2 class="title"><span>2016年！最新トレーニンググッズランキング ( 新着順 )</span></h2>
       <ul class="post">
         <% @trains.each do |train| %>
           <li>
@@ -92,7 +91,7 @@
 </section>
 <% end %>
       <section class="widget">
-      <h3><span>月間レビュー数ランキング</span></h3>
+      <h3><span>レビュー数ランキング</span></h3>
       <div class="ranking">
         <% @ranking.each.with_index(1) do |train, i| %>
             <a href="/trains/<%= train.id %>">
