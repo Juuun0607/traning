@@ -12,9 +12,12 @@ class TrainsController < ApplicationController
   end
 
   def new
+    @train = Train.new
   end
 
   def create
+    current_user.trains.create(trains_params)
+    redirect_to :root
   end
 
   def edit
@@ -24,5 +27,10 @@ class TrainsController < ApplicationController
   end
 
   def destroy
+  end
+
+  private
+  def trains_params
+    params.require(:train).permit(:title, :text, :image, :link1, :link2, :link3)
   end
 end
