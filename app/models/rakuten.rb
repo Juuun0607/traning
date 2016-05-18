@@ -1,5 +1,3 @@
-require 'active_resource'
-
 class Rakuten < ActiveResource::Base
   self.site     = "https://app.rakuten.co.jp/services/api/IchibaItem/Ranking/20120927?format=json&applicationId=1002849688028137212" #リソースのURL
   self.format   = :json #リソースのフォーマット
