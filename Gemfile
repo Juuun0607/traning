@@ -50,6 +50,7 @@ gem 'ransack'
 gem 'jquery-turbolinks'
 gem 'compass-rails','~> 2.0'
 gem 'sprockets', '2.11.0'
+gem 'rakuten_web_service'
 
 group :production do
   gem 'rails_12factor'

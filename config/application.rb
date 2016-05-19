@@ -24,3 +24,8 @@ module Training
     config.active_record.raise_in_transactional_callbacks = true
   end
 end
+
+  RakutenWebService.configuration do |c|
+  c.application_id = '4dadbc6783491d97584ba90cb382d85f196d1916'
+  c.affiliate_id = '14dc851c.e6510207.14dc851d.521f1dd5'
+  end
