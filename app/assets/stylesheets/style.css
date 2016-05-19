@@ -318,6 +318,9 @@ h2.title {
   font-weight: bold;
   color: #000000;
   border-bottom: 1px solid #515151;
+  border-left:7px solid;
+  padding-left:7px;
+  letter-spacing: 3px;
 }
 
 /* line 294, /Users/tech-camp/training/app/assets/stylesheets/style.scss */
