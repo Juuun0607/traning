@@ -2,9 +2,8 @@
   <h4><%= review.title %></h4>
   <div class="review-meta">
     <span class="review-point">
-      評価
-      <span><%= image_tag '<%= review.rate %>0.png' %><%= review.rate %>点</span>
-    </span>
+      評価</span>
+      <img src="../imgages/<%= review.rate %>0.jpg" style="width: 100%" ><%= review.rate %>点
     <span class="review-user"><%= review.user.nickname %></span>
   </div>
 </div>
