@@ -1017,19 +1017,20 @@ h2.title {
   font-size:70%;
 }
 
-
   .rankImage{
   width:40%;
   padding:2px;
   border: thin solid gray;
   margin-bottom:10px;
 }
-/* p{
+
+p{
   font-size:15px;
 }
- */
+
 .rankImage{
   width:40%;
+
 }
 
 }
