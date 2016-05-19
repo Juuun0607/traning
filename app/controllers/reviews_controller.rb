@@ -24,13 +24,9 @@ class ReviewsController < RankingController
   # POST /reviews
   # POST /reviews.json
   def create
-    @review = Review.new(review_params)
+    @review = current_user.reviews.create(review_params)
     train = @review.train
-    if @review.save
-      @reviews = train.reviews
-    else
-      redirect_to :back
-    end
+    @reviews = train.reviews
   end
 
   # PATCH/PUT /reviews/1
@@ -65,6 +61,6 @@ class ReviewsController < RankingController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def review_params
-      params.require(:review).permit(:title, :rate, :review).merge(user_id: 1, train_id: params[:train_id])
+      params.require(:review).permit(:title, :rate, :review).merge(user_id: current_user.id, train_id: params[:train_id])
     end
 end
