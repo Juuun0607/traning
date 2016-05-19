@@ -1,4 +1,14 @@
 <div id="wrapper">
+ <div class="searchform">
+    <%= search_form_for @q do |f| %>
+      <div class="control-group">
+        <div class="controls">
+          <%= f.text_field :title_or_text_cont, placeholder: "商品名・キーワードで検索", class: "form_horizon form_style" %>
+        </div>
+      </div>
+      <%= f.submit class: "form_horizon button_style" %>
+    <% end %>
+  </div>
   <div id="content2">
     <section>
       <article class="content">
@@ -16,7 +26,7 @@
             <tbody>
               <tr>
                 <th>商品名</th>
-                <td><%= link_to (@train.title) , "trains/#{@train.id}", method: :get %></td>
+                <td><%= link_to (@train.title) , "#{@train.id}", method: :get %></td>
               </tr>
               <tr>
                 <th>価格</th>
@@ -30,9 +40,9 @@
           </table>
           <div class="item_links">
             <%= link_to "公式サイトへ" ,(@train.link1) , method: :get ,class: 'itemlink1'%>
-            <a href="" class="itemlink2">Amazon.com<a>
-            <a href="" class="itemlink3">ポンパレモール<a>
-            <a href="" class="itemlink4">楽  天<a>
+            <%= link_to "Amazon.com" ,(@train.link2) , method: :get ,class: 'itemlink2'%>
+            <%= link_to "ポンパレモール" ,(@train.link3) , method: :get ,class: 'itemlink3'%>
+            <%= link_to "楽  天" ,(@train.link4) , method: :get ,class: 'itemlink4'%>
           </div>
 
           <h3>商品レビュー</h3>
@@ -50,6 +60,10 @@
       </article>
     </section>
   </div>
+
+
+<aside id="sidebar" class="sidebar-position">
+
 <!-- sidebar -->
 <aside id="sidebar2">
 
@@ -60,8 +74,10 @@
 <img border="0" width="1" height="1" src="http://www12.a8.net/0.gif?a8mat=2NKAZE+76ZOSA+3D3Q+61C2P" alt="">
 
 <!-- スポンサードリンクおわり -->
+
 <% if user_signed_in? %>
 <% else %>
+
 <section class="Login">
     <h3><span>ログイン</span></h3>
       <div class="submit">
@@ -69,6 +85,7 @@
       <div class="field">
         <label for="user_メールアドレス">メールアドレス</label><br>
         <input autofocus="autofocus" type="email" value="" name="user[email]" id="user_email" class="form_size">
+
       </div>
 
       <div class="field">
@@ -85,6 +102,49 @@
     <input type="submit" name="commit" value="ログイン" class="button_style">
     </div>
 </form>    </div>
+</section>
+
+<!--       <section class="widget">
+      <h3><span>カテゴリ</span></h3>
+      <ul>
+        <li><a href="trains/item">トレーニンググッズ</a></li>
+        <li><a href="trains/item">サプリメント</a></li>
+        <li><a href="trains/item">ダイエット食品</a></li>
+        <li><a href="trains/item">がちむちアイテム</a></li>
+        <li><a href="trains/item">ウェア</a></li>
+        <li><a href="trains/item">あっはっは〜</a></li>
+      </ul>
+    </section>
+
+    <section class="widgetInfo">
+      <div class="newsTitle">
+        <h3 class="title"><span>カテゴリ別人気ランキング</span></h3>
+        <p><a href="trains/item">一覧</a>
+      </p></div>
+      <div class="post news">
+        <p><a href="trains/item"><time>2012/11/30</time><span>環境への取り組み</span></a>
+        </p><p><a href="trains/item"><time>2012/11/15</time><span>新サービスを開始</span></a>
+        </p><p><a href="trains/item"><time>2012/11/02</time><span>リニューアル</span></a>
+        </p><p><a href="trains/item"><time>2012/10/30</time><span>環境への取り組み</span></a>
+        </p><p><a href="trains/item"><time>2012/09/13</time><span>新講座を開講しました</span></a>
+      </p></div>
+
+      </div> -->
+
+     <!--  <div class="field">
+        <label for="user_パスワード">パスワード</label><br>
+        <input autocomplete="off" type="password" name="user[password]" id="user_password" class="form_size">
+      </div>
+
+    <div class="field">
+      <label for="user_パスワードを記憶する">パスワードを記憶する</label>
+    </div>
+      <input name="user[remember_me]" type="hidden" value="0"><input type="checkbox" value="1" name="user[remember_me]" id="user_remember_me">
+
+    <div class="actions">
+    <input type="submit" name="commit" value="ログイン" class="button_style">
+    </div>
+</form>    </div> -->
 </section>
 <% end %>
       <section class="widget">
@@ -110,4 +170,5 @@
       </div>
     </section>
   </aside>
+  </div>
 </div>
