@@ -517,6 +517,10 @@ h2.title {
   float: left;
 }
 
+.review_point{
+  display: table-cell;
+  vertical-align: middle;
+}
 
 .reviews h4 {
   font-size: 120%;
