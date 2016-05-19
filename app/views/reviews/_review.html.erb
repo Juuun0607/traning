@@ -3,7 +3,7 @@
   <div class="review-meta">
     <span class="review-point">
       評価
-      <span>★★★☆☆(<%= review.rate %>点)</span>
+      <span><%= image_tag '<%= review.rate %>0.png' %><%= review.rate %>点</span>
     </span>
     <span class="review-user"><%= review.user.nickname %></span>
   </div>
