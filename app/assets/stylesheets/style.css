@@ -1102,7 +1102,6 @@ ul.post h3{
 }
 
 .post p{
-  font-size:80%;
   float:left;
   margin-bottom:20px;
 }
@@ -1114,10 +1113,9 @@ ul.post h3{
 .post table {
   margin-top:20px;
 }
-
-}
-
-
 .sidebar-position{
   margin-top: 80px;
 }
+
+}
+

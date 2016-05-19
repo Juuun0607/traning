@@ -35,7 +35,7 @@
     <!-- ヘッダー -->
     <header id="top-head">
       <div class="headinner">
-          <div id="mobile-head">
+           <div id="mobile-head">
               <h1>筋トレ・健康グッズの口コミNo.1 サイト</h1>
               <h2><a href="/">Training &amp; Co.</a></h2>
               <div id="nav-toggle">
@@ -49,6 +49,7 @@
           <nav id="global-nav">
               <ul>
                 <% unless user_signed_in? %>
+
                 <!-- ドロワーメニューの中身 -->
                   <li class="drawer-content"><%= link_to "ログイン", new_user_session_path %></li>
                   <li class="drawer-content"><%= link_to "新規登録", new_user_registration_path %></li>
