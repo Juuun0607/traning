@@ -51,6 +51,9 @@ gem 'jquery-turbolinks'
 gem 'compass-rails','~> 2.0'
 gem 'sprockets', '2.11.0'
 gem 'rakuten_web_service'
+gem 'omniauth'
+gem 'omniauth-twitter'
+gem 'omniauth-facebook'
 
 group :production do
   gem 'rails_12factor'
