@@ -2,7 +2,7 @@ class TrainsController < RankingController
 
   def index
     @q = Train.search(params[:q])
-    @trains = @q.result(distinct: true).page(params[:page]).per(5)
+    @trains = @q.result(distinct: true).page(params[:page]).per(5).order("id DESC")
   end
 
   def show

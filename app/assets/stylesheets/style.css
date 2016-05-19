@@ -313,7 +313,7 @@ h2.title {
 
 /* line 286, /Users/tech-camp/training/app/assets/stylesheets/style.scss */
 .post h3 {
-  margin: 30px 0;
+  margin: 20px 0;
   font-size: 150%;
   font-weight: bold;
   color: #000000;
@@ -509,6 +509,9 @@ h2.title {
   padding: 6px 0 3px 0;
 }
 
+#review_review{
+  height:200px;
+}
 
 .review-meta{
   line-height: 22px;
@@ -526,6 +529,15 @@ h2.title {
 
 .new_review{
   margin: 0 0 6px 0;
+}
+
+.new_review .field{
+  margin-bottom:10px;
+}
+
+.new_review .actions{
+  margin-top:20px;
+
 }
 
 /* line 458, /Users/tech-camp/training/app/assets/stylesheets/style.scss */

@@ -40,9 +40,9 @@
           </table>
           <div class="item_links">
             <%= link_to "公式サイトへ" ,(@train.link1) , method: :get ,class: 'itemlink1'%>
-            <a href="" class="itemlink2">Amazon.com<a>
-            <a href="" class="itemlink3">ポンパレモール<a>
-            <a href="" class="itemlink4">楽  天<a>
+            <%= link_to "Amazon.com" ,(@train.link2) , method: :get ,class: 'itemlink2'%>
+            <%= link_to "ポンパレモール" ,(@train.link3) , method: :get ,class: 'itemlink3'%>
+            <%= link_to "楽  天" ,(@train.link4) , method: :get ,class: 'itemlink4'%>
           </div>
 
           <h3>商品レビュー</h3>
