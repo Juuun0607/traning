@@ -515,8 +515,14 @@ h2.title {
 .review-meta{
   line-height: 22px;
   float: left;
+  display: table-cell;
+  vertical-align: middle;
 }
 
+.review_point{
+  display: table-cell;
+  vertical-align: middle;
+}
 
 .reviews h4 {
   font-size: 120%;

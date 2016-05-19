@@ -2,19 +2,8 @@
   <h4><%= review.title %></h4>
   <div class="review-meta">
     <span class="review-point">
-      評価
-      <% if review.rate == 1 %>
-        <span>★☆☆☆☆(1点)</span>
-      <% elsif review.rate == 2 %>
-        <span>★★☆☆☆(2点)</span>
-      <% elsif review.rate == 3 %>
-        <span>★★★☆☆(3点)</span>
-      <% elsif review.rate == 4 %>
-        <span>★★★★☆(4点)</span>
-      <% else %>
-        <span>★★★★★(5点)</span>
-      <% end %>
-    </span>
+      評価</span>
+      <%= image_tag "#{review.rate}0.png", css: "width: 100%" %><%= review.rate %>点
     <span class="review-user"><%= review.user.nickname %></span>
   </div>
 </div>
