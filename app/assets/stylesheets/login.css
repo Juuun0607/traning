@@ -38,7 +38,6 @@
 .contents .field .inputlabel {
   text-transform: uppercase;
   letter-spacing: 4px;
-  font-size: 1.5em;
   font-weight: bold;
   color: #000;
   margin-left: auto;
@@ -47,6 +46,7 @@
 
 /* line 47, /Users/tech-camp/training/app/assets/stylesheets/LOGIN.scss */
 .contents .field .inputarea {
+  font-family:'ヒラギノ角ゴ';
   background-color: rgba(0, 0, 0, 0.5);
   -webkit-border-radius: .4em;
   -moz-border-radius: .4em;
@@ -60,7 +60,6 @@
   margin: 0 auto;
   color: #fff;
   padding: 0 0 0 10px;
-  font-size: 1.2em;
   letter-spacing: 2px;
 }
 
@@ -68,7 +67,7 @@
 .contents .field .inputarea:focus {
   color: #ffffff;
   background-color: rgba(0, 0, 0, 0.7);
-  font-family: 'CODE bold';
+  font-family: 'ヒラギノ';
 }
 
 /* line 71, /Users/tech-camp/training/app/assets/stylesheets/LOGIN.scss */

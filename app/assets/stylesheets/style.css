@@ -411,7 +411,7 @@ h2.title {
 
 /* line 363, /Users/tech-camp/training/app/assets/stylesheets/style.scss */
 .post .itemlink1 {
-  border-radius: .3em;
+  border-radius: .7em;
   border-style: solid;
   border-width: 1px;
   background-color: red;
@@ -420,18 +420,18 @@ h2.title {
   letter-spacing: .15em;
   margin-bottom: .5em;
   margin-right: .5em;
-  padding: 1em .75em;
+  padding: 1.5em 1em;
   text-decoration: none;
   text-transform: uppercase;
   -webkit-transition: color .4s,background-color .4s,border .4s;
   transition: color .4s,background-color .4s,border .4s;
-  font-size: 12px;
+  font-size: 14px;
   transition: 0.3s;
 }
 
 /* line 382, /Users/tech-camp/training/app/assets/stylesheets/style.scss */
 .post .itemlink2 {
-  border-radius: .3em;
+  border-radius: .7em;
   border-style: solid;
   border-width: 1px;
   background-color: gray;
@@ -440,18 +440,18 @@ h2.title {
   letter-spacing: .15em;
   margin-bottom: .5em;
   margin-right: .5em;
-  padding: 1em .75em;
+  padding: 1.5em 1em;
   text-decoration: none;
   text-transform: uppercase;
   -webkit-transition: color .4s,background-color .4s,border .4s;
   transition: color .4s,background-color .4s,border .4s;
-  font-size: 12px;
+  font-size: 14px;
   transition: 0.3s;
 }
 
 /* line 401, /Users/tech-camp/training/app/assets/stylesheets/style.scss */
 .post .itemlink3 {
-  border-radius: .3em;
+  border-radius: .7em;
   border-style: solid;
   border-width: 1px;
   background-color: orange;
@@ -460,18 +460,18 @@ h2.title {
   letter-spacing: .15em;
   margin-bottom: .5em;
   margin-right: .5em;
-  padding: 1em .75em;
+  padding: 1.5em 1em;
   text-decoration: none;
   text-transform: uppercase;
   -webkit-transition: color .4s,background-color .4s,border .4s;
   transition: color .4s,background-color .4s,border .4s;
-  font-size: 12px;
+  font-size: 14px;
   transition: 0.3s;
 }
 
 /* line 420, /Users/tech-camp/training/app/assets/stylesheets/style.scss */
 .post .itemlink4 {
-  border-radius: .3em;
+  border-radius: .7em;
   border-style: solid;
   border-width: 1px;
   background-color: green;
@@ -480,12 +480,12 @@ h2.title {
   letter-spacing: .15em;
   margin-bottom: .5em;
   margin-right: .5em;
-  padding: 1em .75em;
+  padding: 1.5em 1em;
   text-decoration: none;
   text-transform: uppercase;
   -webkit-transition: color .4s,background-color .4s,border .4s;
   transition: color .4s,background-color .4s,border .4s;
-  font-size: 12px;
+  font-size: 14px;
   transition: 0.3s;
 }
 
@@ -1017,12 +1017,20 @@ h2.title {
   font-size:70%;
 }
 
+  .rankImage{
+  width:40%;
+  padding:2px;
+  border: thin solid gray;
+  margin-bottom:10px;
+}
+
 p{
   font-size:15px;
 }
 
 .rankImage{
   width:40%;
+
 }
 
 }
