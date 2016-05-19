@@ -213,7 +213,6 @@
     -webkit-transition: .5s ease-in-out;
     -moz-transition: .5s ease-in-out;
     transition: .5s ease-in-out;
-    border-radius: 10em;
   }
 
   /* line 175, /Users/tech-camp/training/app/assets/stylesheets/header.scss */

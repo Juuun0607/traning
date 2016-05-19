@@ -300,12 +300,13 @@ h2.title {
 /* line 278, /Users/tech-camp/training/app/assets/stylesheets/style.scss */
 .post h2 {
   margin: 10px 0;
-  font-size: 250%;
+  font-size: 150%;
   font-weight: bold;
   color: #000000;
   border-bottom: 1px solid #515151;
   border-left:10px solid;
   padding-left:10px;
+  letter-spacing: 3px;
 }
 
 /* line 286, /Users/tech-camp/training/app/assets/stylesheets/style.scss */
@@ -995,6 +996,14 @@ ul.post h3 {
 
 h2.title {
   font-size:70%;
+}
+
+p{
+  font-size:15px;
+}
+
+.rankImage{
+  width:40%;
 }
 
 }

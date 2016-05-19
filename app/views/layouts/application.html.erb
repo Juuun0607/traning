@@ -52,6 +52,7 @@
                 <!-- ドロワーメニューの中身 -->
                   <li class="drawer-content"><%= link_to "ログイン", new_user_session_path %></li>
                   <li class="drawer-content"><%= link_to "新規登録", new_user_registration_path %></li>
+                  <!--  -->
                 <% else %>
                   <li class="drawer-content"><%= link_to "サインアウト", destroy_user_session_path, method: :delete %></li>
               <% end %>
