@@ -8,6 +8,7 @@ $(function() {
           $header.removeClass('fixed');
       }
   });
+
   // Nav Toggle Button
   $('#nav-toggle').click(function(){
       $header.toggleClass('open');
