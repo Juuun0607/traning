@@ -29,7 +29,7 @@
 
 #top-head h2 a {
   font-size: 200%;
-  font-family: 'CODE LIGHT';
+  font-family: 'CODE LIGHT','CenturyGothic',sans-serif;
   letter-spacing: 5px;
   margin: 0 0 0 5%;
 }
