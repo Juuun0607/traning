@@ -18,7 +18,11 @@
             <%= image_tag (@train.image),:width => '50%',:class => "itemimage" %>
             <div class="point">
               <p>レビュー平均点数</p>
-              <p>★★★☆☆(3点)</p>
+              <% if @train.reviews.present? %>
+                <%= image_tag "#{@train.reviews.average(:rate).round}0.png", css: "width: 100%" %><%= @train.reviews.average(:rate).round %>点
+              <% else %>
+                レビューはまだありません。
+              <% end %>
             </div><br><br><br><br>
             <%= simple_format(@train.text, :class => "itemtext")%>
           </div>
@@ -42,7 +46,7 @@
             <%= link_to "公式サイトへ" ,(@train.link1) , method: :get ,class: 'itemlink1'%>
             <%= link_to "Amazon.com" ,(@train.link2) , method: :get ,class: 'itemlink2'%>
             <%= link_to "ポンパレモール" ,(@train.link3) , method: :get ,class: 'itemlink3'%>
-            <%= link_to "楽  天" ,(@train.link4) , method: :get ,class: 'itemlink4'%>
+
           </div>
 
           <h3>商品レビュー</h3>
@@ -60,7 +64,6 @@
       </article>
     </section>
   </div>
-
 
 <aside id="sidebar" class="sidebar-position">
 
