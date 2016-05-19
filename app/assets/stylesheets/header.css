@@ -1,21 +1,15 @@
 @charset "UTF-8";
-/* ヘッダー
-------------------------------------------------------------*/
-/* line 5, /Users/tech-camp/training/app/assets/stylesheets/header.scss */
 .headinner {
   width: 980px;
   margin: 0 auto;
 }
 
-/* line 9, /Users/tech-camp/training/app/assets/stylesheets/header.scss */
 .headinner:after {
   content: "";
   clear: both;
   display: block;
 }
 
-/* header */
-/* line 16, /Users/tech-camp/training/app/assets/stylesheets/header.scss */
 #top-head {
   top: -100px;
   position: absolute;
@@ -27,14 +21,12 @@
   background-color: rgba(0, 0, 0, 0.8);
 }
 
-/* line 27, /Users/tech-camp/training/app/assets/stylesheets/header.scss */
 #top-head h1 {
   margin: 0 1% 1% 5%;
   font-size: 1px;
   top: -1%;
 }
 
-/* line 33, /Users/tech-camp/training/app/assets/stylesheets/header.scss */
 #top-head h2 a {
   font-size: 200%;
   font-family: 'CODE LIGHT';
@@ -42,25 +34,21 @@
   margin: 0 0 0 5%;
 }
 
-/* line 41, /Users/tech-camp/training/app/assets/stylesheets/header.scss */
 #top-head a,
 #top-head {
   color: #fff;
   text-decoration: none;
 }
 
-/* line 45, /Users/tech-camp/training/app/assets/stylesheets/header.scss */
 #top-head .headinner {
   position: relative;
 }
 
-/* line 48, /Users/tech-camp/training/app/assets/stylesheets/header.scss */
 #top-head .logo {
   float: left;
   font-size: 36px;
 }
 
-/* line 52, /Users/tech-camp/training/app/assets/stylesheets/header.scss */
 #global-nav ul {
   list-style: none;
   position: absolute;
@@ -68,18 +56,14 @@
   bottom: 15px;
 }
 
-/* line 58, /Users/tech-camp/training/app/assets/stylesheets/header.scss */
 #global-nav ul li {
   float: left;
 }
 
-/* line 61, /Users/tech-camp/training/app/assets/stylesheets/header.scss */
 #global-nav ul li a {
   padding: 0 10px;
 }
 
-/* Fixed */
-/* line 66, /Users/tech-camp/training/app/assets/stylesheets/header.scss */
 #top-head.fixed {
   margin-top: 0;
   top: 0;
@@ -90,20 +74,16 @@
   -moz-transition: top 0.1s ease-in;
 }
 
-/* line 75, /Users/tech-camp/training/app/assets/stylesheets/header.scss */
 #top-head.fixed .logo {
   font-size: 24px;
   color: #fff;
 }
 
-/* line 79, /Users/tech-camp/training/app/assets/stylesheets/header.scss */
 #top-head.fixed #global-nav ul li a {
   color: #fff;
   padding: 0 20px;
 }
 
-/* Toggle Button */
-/* line 85, /Users/tech-camp/training/app/assets/stylesheets/header.scss */
 #nav-toggle {
   display: none;
   position: absolute;
@@ -115,12 +95,10 @@
   z-index: 101;
 }
 
-/* line 95, /Users/tech-camp/training/app/assets/stylesheets/header.scss */
 #nav-toggle div {
   position: relative;
 }
 
-/* line 98, /Users/tech-camp/training/app/assets/stylesheets/header.scss */
 #nav-toggle span {
   display: block;
   position: absolute;
@@ -133,44 +111,39 @@
   transition: .35s ease-in-out;
 }
 
-/* line 109, /Users/tech-camp/training/app/assets/stylesheets/header.scss */
 #nav-toggle span:nth-child(1) {
   top: 0;
 }
 
-/* line 112, /Users/tech-camp/training/app/assets/stylesheets/header.scss */
 #nav-toggle span:nth-child(2) {
   top: 11px;
 }
 
-/* line 115, /Users/tech-camp/training/app/assets/stylesheets/header.scss */
 #nav-toggle span:nth-child(3) {
   top: 22px;
 }
 
 @media screen and (max-width: 1440px) {
-  /* line 122, /Users/tech-camp/training/app/assets/stylesheets/header.scss */
   #top-head,
   .headinner {
     width: 100%;
     padding: 0;
   }
 
-  /* line 126, /Users/tech-camp/training/app/assets/stylesheets/header.scss */
   #top-head {
     top: 0;
     position: fixed;
     margin-top: 0;
   }
 
-  /* line 132, /Users/tech-camp/training/app/assets/stylesheets/header.scss */
+
   #top-head h1 {
     margin: 10px;
     font-size: 1px;
     top: -1%;
   }
 
-  /* line 138, /Users/tech-camp/training/app/assets/stylesheets/header.scss */
+
   #top-head h2 a {
     font-size: 200%;
     font-family: 'CODE LIGHT';
@@ -178,13 +151,10 @@
     margin: 10px;
   }
 
-  /* Fixed reset */
-  /* line 146, /Users/tech-camp/training/app/assets/stylesheets/header.scss */
   #top-head.fixed {
     padding-top: 0;
   }
 
-  /* line 149, /Users/tech-camp/training/app/assets/stylesheets/header.scss */
   #mobile-head {
     width: 100%;
     height: 56px;
@@ -192,7 +162,6 @@
     position: relative;
   }
 
-  /* line 156, /Users/tech-camp/training/app/assets/stylesheets/header.scss */
   #top-head.fixed .logo,
   #top-head .logo {
     position: absolute;
@@ -202,7 +171,6 @@
     font-size: 26px;
   }
 
-  /* line 163, /Users/tech-camp/training/app/assets/stylesheets/header.scss */
   #global-nav {
     right: -180px;
     position: absolute;
@@ -215,7 +183,6 @@
     transition: .5s ease-in-out;
   }
 
-  /* line 175, /Users/tech-camp/training/app/assets/stylesheets/header.scss */
   #global-nav ul {
     list-style: none;
     position: static;
@@ -224,13 +191,11 @@
     font-size: 14px;
   }
 
-  /* line 182, /Users/tech-camp/training/app/assets/stylesheets/header.scss */
   #global-nav ul li {
     float: none;
     position: static;
   }
 
-  /* line 187, /Users/tech-camp/training/app/assets/stylesheets/header.scss */
   #top-head #global-nav ul li a,
   #top-head.fixed #global-nav ul li a {
     width: 50%;
@@ -241,27 +206,20 @@
     border-bottom: 1px solid rgba(0, 0, 0, 0.2);
   }
 
-  /* line 195, /Users/tech-camp/training/app/assets/stylesheets/header.scss */
   #nav-toggle {
     display: block;
   }
 
-  /* #nav-toggle 切り替えアニメーション */
-  /* line 199, /Users/tech-camp/training/app/assets/stylesheets/header.scss */
   .open #nav-toggle span:nth-child(1) {
     top: 11px;
     -webkit-transform: rotate(315deg);
     -moz-transform: rotate(315deg);
     transform: rotate(315deg);
   }
-
-  /* line 205, /Users/tech-camp/training/app/assets/stylesheets/header.scss */
   .open #nav-toggle span:nth-child(2) {
     width: 0;
     left: 50%;
   }
-
-  /* line 209, /Users/tech-camp/training/app/assets/stylesheets/header.scss */
   .open #nav-toggle span:nth-child(3) {
     top: 11px;
     -webkit-transform: rotate(-315deg);
@@ -269,10 +227,7 @@
     transform: rotate(-315deg);
   }
 
-  /* #global-nav スライドアニメーション */
-  /* line 216, /Users/tech-camp/training/app/assets/stylesheets/header.scss */
   .open #global-nav {
-    /* #global-nav top + #mobile-head height */
     -moz-transform: translateX(-180px);
     -webkit-transform: translateX(-180px);
     transform: translateX(-180px);
