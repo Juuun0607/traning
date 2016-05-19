@@ -341,7 +341,6 @@ h2.title {
 }
 
 .content_post .itemtext{
-  float:right;
   margin-bottom:10px;
 }
 
@@ -1114,7 +1113,7 @@ ul.post h3{
   margin-top:20px;
 }
 .sidebar-position{
-  margin-top: 80px;
+
 }
 
 }
