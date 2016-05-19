@@ -11,12 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160518085258) do
-
-  create_table "rakutens", force: :cascade do |t|
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
+ActiveRecord::Schema.define(version: 20160517035826) do
 
   create_table "reviews", force: :cascade do |t|
     t.string   "title",      limit: 255
