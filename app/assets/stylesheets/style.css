@@ -80,6 +80,8 @@ embed {
   height: 100%;
 }
 
+
+
 /* リンク設定
 ------------------------------------------------------------*/
 /* line 51, /Users/tech-camp/training/app/assets/stylesheets/style.scss */
@@ -164,7 +166,7 @@ nav .panel, nav#mainNav, .newsTitle, .bg, .post, ul.post li, nav#mainNav .inner 
   float: right;
   width: 233px;
   padding: 0 0 50px;
-  margin-top: 80px;
+  margin-top: 20px;
 }
 
 /* line 134, /Users/tech-camp/training/app/assets/stylesheets/style.scss */
@@ -172,7 +174,7 @@ nav .panel, nav#mainNav, .newsTitle, .bg, .post, ul.post li, nav#mainNav .inner 
   float: left;
   width: 627px;
   padding: 0 0 50px;
-  margin-top: 80px;
+  margin-top: 20px;
 }
 
 /* line 144, /Users/tech-camp/training/app/assets/stylesheets/style.scss */
@@ -336,6 +338,11 @@ h2.title {
 /* line 306, /Users/tech-camp/training/app/assets/stylesheets/style.scss */
 .post .point p {
   font-size: 120%;
+}
+
+.content_post .itemtext{
+  float:right;
+  margin-bottom:10px;
 }
 
 /* line 314, /Users/tech-camp/training/app/assets/stylesheets/style.scss */

@@ -9,6 +9,7 @@ class TrainsController < RankingController
     @train = Train.find(params[:id])
     @reviews = @train.reviews
     @review = Review.new
+    @q = Train.search(params[:q])
   end
 
   def new

@@ -1,4 +1,14 @@
 <div id="wrapper">
+ <div class="searchform">
+    <%= search_form_for @q do |f| %>
+      <div class="control-group">
+        <div class="controls">
+          <%= f.text_field :title_or_text_cont, placeholder: "商品名・キーワードで検索", class: "form_horizon form_style" %>
+        </div>
+      </div>
+      <%= f.submit class: "form_horizon button_style" %>
+    <% end %>
+  </div>
   <div id="content2">
     <section>
       <article class="content">
@@ -16,7 +26,7 @@
             <tbody>
               <tr>
                 <th>商品名</th>
-                <td><%= link_to (@train.title) , "trains/#{@train.id}", method: :get %></td>
+                <td><%= link_to (@train.title) , "#{@train.id}", method: :get %></td>
               </tr>
               <tr>
                 <th>価格</th>
