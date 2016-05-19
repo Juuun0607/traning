@@ -1,0 +1,3 @@
+id,"email","encrypted_password","reset_password_token","reset_password_sent_at","remember_created_at",sign_in_count,"current_sign_in_at","last_sign_in_at","current_sign_in_ip","last_sign_in_ip","created_at","updated_at","nickname"
+1,"a@a.jp","$2a$10$sYUyhZ..m2arO18cBXDAX.fl812atrFqsM0PMuz83sjiFQRyNydyq",NULL,NULL,NULL,5,"2016-05-19 02:02:33","2016-05-18 11:39:30","::1","::1","2016-05-17 15:56:20","2016-05-19 02:02:33","ぴーちゃん"
+2,"poi@poimail.com","$2a$10$5/MXPuhZzlxAs9XqkPKSOex.XqTbIeS.jk.aRmcGpvuwAby.hkf5u",NULL,NULL,NULL,1,"2016-05-18 08:38:33","2016-05-18 08:38:33","::1","::1","2016-05-18 08:38:33","2016-05-18 08:38:33","ぽいぽい"
